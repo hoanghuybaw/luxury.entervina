@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dynamic HTML with jQuery</title>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+</head>
+
+<body>
+
+    <div class="woocommerce columns-4">
+        <ul id="productList" class="products columns-4">
+            <!-- Placeholder for generated li items -->
+        </ul>
+    </div>
+
+    <script>
+        // Dữ liệu mẫu về sản phẩm
+        var products = [
+            {
+                name: "Product Name 1",
+                originalPrice: 600,
+                discountedPrice: 495
+            },
+            {
+                name: "Product Name 2",
+                originalPrice: 700,
+                discountedPrice: 599
+            },
+            // Thêm các sản phẩm khác ở đây nếu cần
+        ];
+
+        // Lặp qua mỗi sản phẩm và tạo các phần tử li
+        var productList = document.getElementById("productList");
+
+        products.forEach(function (product) {
+            var li = document.createElement("li");
+            li.classList.add("ast-article-single", "desktop-align-center", "tablet-align-center", "mobile-align-center", "product", "type-product", "post-690", "status-publish", "first", "instock", "product_cat-bracelets", "has-post-thumbnail", "sale", "shipping-taxable", "purchasable", "product-type-simple");
+
+            li.innerHTML = `
+            <div class="astra-shop-thumbnail-wrap">
+                <a href="" class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                    <img />
+                    <img decoding="async" width="960" height="1200" src="" class="show-on-hover" alt sizes="(max-width: 960px) 100vw, 960px" />
+                </a>
+                <span class="ast-on-card-button ast-onsale-card" data-notification="default">Sale!</span>
+                <a href="" data-quantity="1" class="ast-on-card-button ast-select-options-trigger product_type_simple add_to_cart_button ajax_add_to_cart" data-product_id="690" data-product_sku aria-label="Add to cart: &ldquo;${product.name}&rdquo;" rel="nofollow">
+                    <span class="ast-card-action-tooltip">Add to cart</span>
+                    <span class="ahfb-svg-iconset">
+                        <span class="ast-icon icon-basket"></span>
+                    </span>
+                </a>
+            </div>
+            <div class="astra-shop-summary-wrap">
+                <a href="" class="ast-loop-product__link">
+                    <h2 class="woocommerce-loop-product__title">${product.name}</h2>
+                </a>
+                <span class="price">
+                    <del aria-hidden="true">
+                        <span class="woocommerce-Price-amount amount">
+                            <bdi>${product.originalPrice}&nbsp;<span class="woocommerce-Price-currencySymbol">&#36;</span></bdi>
+                        </span>
+                    </del>
+                    <ins>
+                        <span class="woocommerce-Price-amount amount">
+                            <bdi>${product.discountedPrice}&nbsp;<span class="woocommerce-Price-currencySymbol">&#36;</span></bdi>
+                        </span>
+                    </ins>
+                </span>
+            </div>
+        `;
+
+            productList.appendChild(li);
+        });
+    </script>
+
+</body>
+
+</html>
