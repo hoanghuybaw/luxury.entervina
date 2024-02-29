@@ -16,44 +16,9 @@
   <link rel="stylesheet" href="./css/woocommerce/uag-css-263b9.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" />
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
-  <script src="./js/sticky-add-to-cart.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css" />
   <link rel="stylesheet" href="./css/dropdown.css">
   <style>
-    .product-gallery {
-      width: 100%;
-      max-width: 600px;
-      margin: auto;
-    }
-
-    .lightSlider .active img {
-      width: 100% !important;
-    }
-
-    .lSSlideOuter .lSPager.lSGallery img {
-      display: block;
-      height: 100px;
-      max-width: 100%;
-    }
-
-    .lSGallery img {
-      width: 100%;
-      object-fit: cover;
-      height: auto;
-      opacity: 0.5;
-    }
-
-    .lSGallery .active img {
-      opacity: 1;
-    }
-
-    .box-product {
-      display: grid;
-      grid-template-columns: repeat(2, 1fr);
-      gap: 2rem;
-    }
-
     .wc-tabs {
       border-top: 1px solid #ddd;
     }
@@ -63,10 +28,86 @@
     }
 
     @media (max-width: 921px) {
-      .box-product {
+      .box-detail-product {
         display: flex;
         flex-direction: column;
       }
+
+      .swiper-slider {
+        width: 100% !important;
+      }
+    }
+
+    .swiper {
+      width: 100%;
+      height: 100%;
+    }
+
+    .swiper-slide {
+      text-align: center;
+      font-size: 18px;
+      background: #fff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    body {
+      background: #000;
+      color: #000;
+    }
+
+    .swiper {
+      width: 100%;
+      height: 300px;
+      margin-left: auto;
+      margin-right: auto;
+    }
+
+    .swiper-slide {
+      background-size: cover;
+      background-position: center;
+    }
+
+    .mySwiper2 {
+      height: 80%;
+      width: 100%;
+      position: relative;
+    }
+
+    .mySwiper {
+      height: 20%;
+      box-sizing: border-box;
+      padding: 10px 0;
+    }
+
+    .mySwiper .swiper-slide {
+      width: 25%;
+      height: 100%;
+      opacity: 0.4;
+    }
+
+    .mySwiper .swiper-slide-thumb-active {
+      opacity: 1;
+    }
+
+    .swiper-slide img {
+      display: block;
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+
+    .box-detail-product {
+      display: flex;
+      gap: 3rem;
     }
   </style>
   <title>luxury</title>
@@ -170,7 +211,7 @@
                 <div class="dropdown">
                   <button style="border: none !important;" onclick="toggleDropdown()" type="button"
                     class=" dropbtn menu-toggle main-header-menu-toggle ast-mobile-menu-trigger-minimal">
-                    <i id="dropdownIcon" class="fa fa-bars" aria-hidden="true"></i>
+                    ☰
                   </button>
                   <div id="myDropdown" class="dropdown-content">
                     <a href="./product.html">RINGS</a>
@@ -192,25 +233,49 @@
             <div class="ast-woocommerce-container">
               <div
                 class="ast-article-single desktop-align-center tablet-align-center mobile-align-center product type-product post-692 status-publish first instock product_cat-bracelets has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
-                <div class="box-product">
-                  <ul id="product-gallery">
-                    <li class="img-thumb" data-thumb="./img/bracelet-01-a.jpg">
-                      <img src="./img/bracelet-01-a.jpg" alt="Image 1" />
-                    </li>
-                    <li class="img-thumb" data-thumb="./img/bracelet-01-b.jpg">
-                      <img src="./img/bracelet-01-b.jpg" alt="Image 2" />
-                    </li>
-                    <li class="img-thumb" data-thumb="./img/bracelet-01-c-600x750.jpg">
-                      <img src="./img/bracelet-01-c-600x750.jpg" alt="Image 2" />
-                    </li>
-                    <li class="img-thumb" data-thumb="./img/bracelet-d.jpg">
-                      <img src="./img/bracelet-d.jpg" alt="Image 2" />
-                    </li>
-                  </ul>
+                <div class="box-detail-product">
+                  <div style="width: 50%" class="swiper-slider">
+                    <div class="swiper mySwiper2">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="./img/bracelet-01-b.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="./img/bracelet-01-b.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="./img/bracelet-01-b.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="./img/bracelet-01-b.jpg" />
+                        </div>
+                      </div>
+                      <div class="box-search">
+                        <i class="fa fa-search" aria-hidden="true"></i>
+                      </div>
+                    </div>
+                    <div thumbsSlider="" class="swiper mySwiper">
+                      <div class="swiper-wrapper">
+                        <div class="swiper-slide">
+                          <img src="./img/bracelet-01-b.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="./img/bracelet-01-b.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="./img/bracelet-01-b.jpg" />
+                        </div>
+                        <div class="swiper-slide">
+                          <img src="./img/bracelet-01-b.jpg" />
+                        </div>
+                      </div>
+                    </div>
+                  </div>
                   <div class="summary entry-summary">
                     <nav class="woocommerce-breadcrumb" aria-label="Breadcrumb">
                       <a href="../../../index.html">Home</a>&nbsp;&#47;&nbsp;<a
-                        href="../../product-category/bracelets/index.html">Bracelets</a>&nbsp;&#47;&nbsp;Product Name 3
+                        href="../../product-category/bracelets/index.html">Bracelets</a>&nbsp;&#47;&nbsp;Product Name
+                      3
                     </nav>
                     <span class="single-product-category"><a href="../../product-category/bracelets/index.html"
                         rel="tag">Bracelets</a></span>
@@ -521,9 +586,10 @@
       var li = document.createElement("li");
       li.classList.add("product");
       li.innerHTML = `<div class="astra-shop-thumbnail-wrap">
-                <a href=""class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                <a href=""class="woocommerce-LoopProduct-link woocommerce-loop-product__link box-product">
                     <img src="${product.linkImg}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt />
-                    <img src="${product.linkImg2}" class="show-on-hover"/></a>
+                    <img src="${product.linkImg2}" class="show-on-hover"/>
+                    <div class="box-search box-basket"> <i class="fa fa-shopping-basket" aria-hidden="true"></i> </a>
             </div>
             <div class="astra-shop-summary-wrap">
                 <a href="" class="ast-loop-product__link">
@@ -543,14 +609,12 @@
 
   <script>
     var swiper = new Swiper(".mySwiper", {
-      loop: true,
       spaceBetween: 10,
       slidesPerView: 4,
       freeMode: true,
       watchSlidesProgress: true,
     });
     var swiper2 = new Swiper(".mySwiper2", {
-      loop: true,
       spaceBetween: 10,
       navigation: {
         nextEl: ".swiper-button-next",
@@ -559,25 +623,6 @@
       thumbs: {
         swiper: swiper,
       },
-    });
-  </script>
-
-  <script>
-    $(document).ready(function () {
-      $("#product-gallery").lightSlider({
-        gallery: true,
-        item: 1,
-        loop: true,
-        thumbItem: 4,
-        slideMargin: 0,
-        enableDrag: false,
-        currentPagerPosition: "left",
-        onSliderLoad: function (el) {
-          el.lightGallery({
-            selector: "#product-gallery .lslide",
-          });
-        },
-      });
     });
   </script>
 

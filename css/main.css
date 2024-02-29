@@ -4248,10 +4248,10 @@ h6,
 }
 
 #menu-menu-1 {
-  padding-left: 0 !important
+  padding-left: 0 !important;
 }
 #menu-menu-2 {
-  padding-left: 0 !important
+  padding-left: 0 !important;
 }
 @media (max-width: 544px) {
   .site-footer-section-2 {
@@ -4262,4 +4262,54 @@ h6,
     text-align: center;
     padding-top: 1rem;
   }
+}
+.box-search {
+  position: absolute;
+  z-index: 10;
+  top: 10px;
+  right: 0.5rem;
+  padding: 1rem;
+  border-radius: 100%;
+  background: #fff;
+  width: 36px;
+  height: 36px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.box-basket {
+  display: none;
+  transition: all 0.2s;
+}
+
+.box-product:hover .box-basket {
+  display: flex;
+  transition: all 0.2s;
+}
+
+.box-sale {
+  position: absolute;
+  top: 1rem;
+  left: 1rem;
+  background: #fff;
+  width: fit-content;
+  border-radius: 20px;
+  padding: 0.4em 0.8em;
+  font-size: 0.87em;
+  font-weight: 500;
+  line-height: normal;
+  letter-spacing: normal;
+  box-shadow: 0 4px 4px rgba(0, 0, 0, 0.15);
+  opacity: 1;
+  visibility: visible;
+}
+
+.btn-drawer {
+  border: none !important;
+  padding: unset !important;
+}
+
+.btn-drawer:hover {
+  background: unset;
+  color: #000;
 }

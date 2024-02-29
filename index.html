@@ -16,6 +16,26 @@
   <link rel="stylesheet" href="./css/woocommerce/uag-css-263b9.css" />
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
   <link rel="stylesheet" href="./css/dropdown.css">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="./css/drawer.css">
+  <style>
+    .swiper {
+      padding-top: 3rem;
+      padding-bottom: 3rem;
+    }
+
+    .swiper .swiper-pagination {
+      bottom: -5px;
+    }
+
+    .swiper-wrapper img {
+      border: 1px solid #ddd;
+    }
+
+    .swiper-pagination-bullet-active {
+      background: #bf936e;
+    }
+  </style>
   <title>luxury</title>
 </head>
 
@@ -93,13 +113,59 @@
                     </div>
                   </div>
                   <i class="fa fa-search" aria-hidden="true"></i>
-                  <i class="fa fa-shopping-basket" aria-hidden="true"></i>
+                  <div>
+                    <a href="#" data-drawer-trigger aria-controls="drawer-name" aria-expanded="false"><i
+                        class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+                  </div>
+
                 </div>
               </div>
             </div>
           </div>
         </div>
       </div>
+      <section class="drawer" id="drawer-name" data-drawer-target>
+        <div class="drawer__overlay" data-drawer-close tabindex="-1"></div>
+        <div class="drawer__wrapper">
+          <div class="drawer__header">
+            <div class="drawer__title">
+              Shopping cart
+            </div>
+            <button class="btn-drawer" data-drawer-close aria-label="Close Drawer"><i class="fa fa-times fa-lg"
+                aria-hidden="true"></i></button>
+          </div>
+          <div class="drawer__content">
+            <ul class="woocommerce-mini-cart cart_list product_list_widget ">
+              <li class="woocommerce-mini-cart-item mini_cart_item" style="display: flex;">
+                <div>
+                  <a href="">
+                    <img width="300" height="300"
+                      src="https://luxury.entervina.com/wp-content/uploads/2022/08/earrings-05-a-300x300.jpg"
+                      class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt="">Product Name 11 </a>
+                  <span class="quantity">1 × <span class="woocommerce-Price-amount amount"><bdi>400$<span
+                          class="woocommerce-Price-currencySymbol">$</span></bdi></span></span>
+                </div>
+                <a style="margin-left: auto;" href="" class="remove remove_from_cart_button"><span
+                    class="ahfb-svg-iconset ast-inline-flex">X</span></a>
+              </li>
+            </ul>
+
+          </div>
+          <div class="drawer__footer" style="padding: 0 1rem;">
+            <p class="woocommerce-mini-cart__total total"
+              style="border-top: 1px solid #ddd; border-bottom: 1px solid #ddd; margin: 0; padding: 1rem 0; display: flex; justify-content: space-between">
+              <strong>Subtotal:</strong>
+              <span class="woocommerce-Price-amount amount">400$
+              </span>
+            </p>
+            <p class="woocommerce-mini-cart__buttons buttons"
+              style="display: flex; flex-direction: column; text-align: center;">
+              <a style="margin-bottom: 1rem;" href="./card.html" class="button wc-forward">View cart</a>
+              <a href="./checkout.html" class="button checkout wc-forward">Checkout</a>
+            </p>
+          </div>
+        </div>
+      </section>
       <div id="ast-mobile-header" class="ast-mobile-header-wrap">
         <div class="ast-builder-grid-row">
           <div class="site-header-primary-section-left">
@@ -117,14 +183,14 @@
                 <div class="dropdown">
                   <button style="border: none !important;" onclick="toggleDropdown()" type="button"
                     class=" dropbtn menu-toggle main-header-menu-toggle ast-mobile-menu-trigger-minimal">
-                    <i id="dropdownIcon" class="fa fa-bars" aria-hidden="true"></i>
-                  </button>
-                  <div id="myDropdown" class="dropdown-content">
-                    <a href="./product.html">RINGS</a>
-                    <a href="./product.html">BRACELETS</a>
-                    <a href="./product.html">EARINGS</a>
-                    <a href="./product.html">EARINGS</a>
-                  </div>
+                    ☰
+                    </a>
+                    <div id="myDropdown" class="dropdown-content">
+                      <a href="./product.html">RINGS</a>
+                      <a href="./product.html">BRACELETS</a>
+                      <a href="./product.html">EARINGS</a>
+                      <a href="./product.html">EARINGS</a>
+                    </div>
                 </div>
               </div>
             </div>
@@ -165,7 +231,20 @@
                     </div>
                   </div>
                 </div>
-
+                <div>
+                  <div class="swiper-container swiper">
+                    <div class="swiper-wrapper">
+                      <div class="swiper-slide"><img src="./img/logo-007.png" alt="" /></div>
+                      <div class="swiper-slide"><img src="./img/logo-007.png" alt="" /></div>
+                      <div class="swiper-slide"><img src="./img/logo-007.png" alt="" /></div>
+                      <div class="swiper-slide"><img src="./img/logo-007.png" alt="" /></div>
+                      <div class="swiper-slide"><img src="./img/logo-007.png" alt="" /></div>
+                      <div class="swiper-slide"><img src="./img/logo-007.png" alt="" /></div>
+                      <div class="swiper-slide"><img src="./img/logo-007.png" alt="" /></div>
+                    </div>
+                    <div class="swiper-pagination"></div>
+                  </div>
+                </div>
                 <div class="LuEn-block-uagb-container uagb-block-de9dbaf1 alignfull uagb-is-root-container">
                   <div class="uagb-container-inner-blocks-wrap">
                     <div class="LuEn-block-uagb-advanced-heading uagb-block-db0bbbd4">
@@ -468,14 +547,71 @@
     </footer>
   </div>
   <script src="./js/dropdown.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="./js/drawer.js"></script>
   <script>
     (function () {
       var c = document.body.className;
       c = c.replace(/woocommerce-no-js/, "woocommerce-js");
       document.body.className = c;
     })();
-  </script>
 
+    var swiper;
+
+    var swiperOptions = {
+      loop: true,
+      centeredSlides: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+    };
+
+    function setSlidesPerView() {
+      var screenWidth = window.innerWidth;
+      if (screenWidth >= 1200) {
+        swiperOptions.slidesPerView = 4;
+        swiperOptions.spaceBetween = 30;
+      } else if (screenWidth >= 992) {
+        swiperOptions.slidesPerView = 3;
+        swiperOptions.spaceBetween = 20;
+      } else {
+        swiperOptions.slidesPerView = 2;
+        swiperOptions.spaceBetween = 10;
+      }
+    }
+
+    function initSwiper() {
+      setSlidesPerView();
+      swiper = new Swiper(".swiper-container", swiperOptions);
+    }
+
+    function updateSwiper() {
+      setSlidesPerView();
+      swiper.destroy();
+      swiper = null;
+      initSwiper();
+    }
+
+    window.addEventListener("resize", function () {
+      if (swiper !== null) {
+        updateSwiper();
+      }
+    });
+
+    initSwiper();
+
+  </script>
+  <script>
+    function myFunction() {
+      var x = document.getElementById("myLinks");
+      if (x.style.display === "block") {
+        x.style.display = "none";
+      } else {
+        x.style.display = "block";
+      }
+    }
+  </script>
   <script>
     var products = [
       {
@@ -526,9 +662,11 @@
       var li = document.createElement("li");
       li.classList.add("product");
       li.innerHTML = `<div class="astra-shop-thumbnail-wrap">
-                <a href=""class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                <a href=""class="woocommerce-LoopProduct-link woocommerce-loop-product__link box-product">
                     <img src="${product.linkImg}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt />
-                    <img src="${product.linkImg}" class="show-on-hover"/></a>
+                    <img src="${product.linkImg}" class="show-on-hover"/>
+                    <div class="box-search box-basket"> <i class="fa fa-shopping-basket" aria-hidden="true"></i>  </div>
+                    <div class="box-sale">Sale !</div></a>
             </div>
             <div class="astra-shop-summary-wrap">
                 <a href="" class="ast-loop-product__link">
@@ -547,9 +685,10 @@
       var li = document.createElement("li");
       li.classList.add("product");
       li.innerHTML = `<div class="astra-shop-thumbnail-wrap">
-                <a href=""class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                <a href=""class="woocommerce-LoopProduct-link woocommerce-loop-product__link box-product">
                     <img src="${product.linkImg}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt />
-                    <img src="${product.linkImg}" class="show-on-hover"/></a>
+                    <img src="${product.linkImg}" class="show-on-hover"/>
+                    <div class="box-search box-basket"> <i class="fa fa-shopping-basket" aria-hidden="true"></i>  </div></a>
             </div>
             <div class="astra-shop-summary-wrap">
                 <a href="" class="ast-loop-product__link">
