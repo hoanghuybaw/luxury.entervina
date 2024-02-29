@@ -1,839 +1,526 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="robots" content="max-image-preview:large" />
-    <link rel="stylesheet" href="./css/main.css" media="all" />
-    <link
-      rel="stylesheet"
-      id="astra-google-fonts-css"
-      href="https://fonts.googleapis.com/css?family=Roboto%3A300%2C%7CCinzel%3Anormal%2C%7CRoboto+Condensed%3A400&amp;display=fallback&amp;ver=4.6.5"
-      media="all"
-    />
-    <link
-      rel="stylesheet"
-      id="astra-theme-css-css"
-      href="./css/main_1.css"
-      media="all"
-    />
-    <link
-      rel="stylesheet"
-      href="./css/woocommerce/woocommerce-grid.min1dc6.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./css/woocommerce/woocommerce-layout-grid.min1dc6.css"
-    />
-    <link
-      rel="stylesheet"
-      href="./css/woocommerce/woocommerce-smallscreen-grid.min1dc6.css"
-    />
-    <link rel="stylesheet" href="./css/woocommerce/uag-css-263b9.css" />
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
-    />
-    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"
-    />
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
-    <script src="./js/sticky-add-to-cart.js"></script>
-    <style>
-      .product-gallery {
-        width: 100%;
-        max-width: 600px;
-        margin: auto;
-      }
 
-      .lightSlider .active img {
-        width: 100% !important;
-      }
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="robots" content="max-image-preview:large" />
+  <link rel="stylesheet" href="./css/main.css" media="all" />
+  <link rel="stylesheet" id="astra-google-fonts-css"
+    href="https://fonts.googleapis.com/css?family=Roboto%3A300%2C%7CCinzel%3Anormal%2C%7CRoboto+Condensed%3A400&amp;display=fallback&amp;ver=4.6.5"
+    media="all" />
+  <link rel="stylesheet" id="astra-theme-css-css" href="./css/main_1.css" media="all" />
+  <link rel="stylesheet" href="./css/woocommerce/woocommerce-grid.min1dc6.css" />
+  <link rel="stylesheet" href="./css/woocommerce/woocommerce-layout-grid.min1dc6.css" />
+  <link rel="stylesheet" href="./css/woocommerce/woocommerce-smallscreen-grid.min1dc6.css" />
+  <link rel="stylesheet" href="./css/woocommerce/uag-css-263b9.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" />
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+  <script src="./js/sticky-add-to-cart.js"></script>
+  <link rel="stylesheet" href="./css/dropdown.css">
+  <style>
+    .product-gallery {
+      width: 100%;
+      max-width: 600px;
+      margin: auto;
+    }
 
-      .lSSlideOuter .lSPager.lSGallery img {
-        display: block;
-        height: 100px;
-        max-width: 100%;
-      }
-      .lSGallery img {
-        width: 100%;
-        object-fit: cover;
-        height: auto;
-        opacity: 0.5;
-      }
-      .lSGallery .active img {
-        opacity: 1;
-      }
+    .lightSlider .active img {
+      width: 100% !important;
+    }
+
+    .lSSlideOuter .lSPager.lSGallery img {
+      display: block;
+      height: 100px;
+      max-width: 100%;
+    }
+
+    .lSGallery img {
+      width: 100%;
+      object-fit: cover;
+      height: auto;
+      opacity: 0.5;
+    }
+
+    .lSGallery .active img {
+      opacity: 1;
+    }
+
+    .box-product {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 2rem;
+    }
+
+    .wc-tabs {
+      border-top: 1px solid #ddd;
+    }
+
+    .wc-tabs .active {
+      border-top: 2px solid #000;
+    }
+
+    @media (max-width: 921px) {
       .box-product {
-        display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        gap: 2rem;
+        display: flex;
+        flex-direction: column;
       }
-      .wc-tabs {
-        border-top: 1px solid #ddd;
-      }
-      .wc-tabs .active {
-        border-top: 2px solid #000;
-      }
-    </style>
-    <title>luxury</title>
-  </head>
+    }
+  </style>
+  <title>luxury</title>
+</head>
 
-  <body
-    class="home page-template-default page page-id-2 LuEn-custom-logo theme-astra woocommerce-no-js ast-desktop ast-plain-container ast-no-sidebar astra-4.6.5 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header astra-addon-4.0.1"
-  >
-    <div class="hfeed site" id="page">
-      <header
-        class="site-header header-main-layout-1 ast-primary-menu-enabled ast-hide-custom-menu-mobile ast-builder-menu-toggle-icon ast-mobile-header-inline"
-        id="masthead"
-      >
-        <div id="ast-desktop-header">
-          <div class="ast-main-header-wrap">
-            <div class="ast-primary-header-bar">
-              <div class="site-primary-header-wrap ast-container">
-                <div class="ast-builder-grid-row ast-grid-center-col-layout">
+<body
+  class="home page-template-default page page-id-2 LuEn-custom-logo theme-astra woocommerce-no-js ast-desktop ast-plain-container ast-no-sidebar astra-4.6.5 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header astra-addon-4.0.1">
+  <div class="hfeed site" id="page">
+    <header
+      class="site-header header-main-layout-1 ast-primary-menu-enabled ast-hide-custom-menu-mobile ast-builder-menu-toggle-icon ast-mobile-header-inline"
+      id="masthead">
+      <div id="ast-desktop-header">
+        <div class="ast-main-header-wrap">
+          <div class="ast-primary-header-bar">
+            <div class="site-primary-header-wrap ast-container">
+              <div class="ast-builder-grid-row ast-grid-center-col-layout">
+                <div class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
                   <div
-                    class="site-header-primary-section-left site-header-section ast-flex site-header-section-left"
-                  >
-                    <div
-                      class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element"
-                    >
-                      <div class="ast-main-header-bar-alignment">
-                        <div class="main-header-bar-navigation">
-                          <nav
-                            class="site-navigation ast-flex-grow-1"
-                            id="primary-site-navigation-desktop"
-                          >
-                            <div class="main-navigation ast-inline-flex">
-                              <ul
-                                id="ast-hf-menu-1"
-                                class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex submenu-with-border ast-menu-hover-style-overline stack-on-mobile"
-                              >
-                                <li
-                                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
-                                >
-                                  <a href="" class="menu-link">Rings</a>
-                                </li>
-                                <li
-                                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
-                                >
-                                  <a href="" class="menu-link">Bracelets</a>
-                                </li>
-                                <li
-                                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
-                                >
-                                  <a href="" class="menu-link">Earrings</a>
-                                </li>
-                                <li
-                                  class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
-                                >
-                                  <a href="" class="menu-link">Necklaces</a>
-                                </li>
-                              </ul>
-                            </div>
-                          </nav>
-                        </div>
+                    class="ast-builder-menu-1 ast-builder-menu ast-flex ast-builder-menu-1-focus-item ast-builder-layout-element">
+                    <div class="ast-main-header-bar-alignment">
+                      <div class="main-header-bar-navigation">
+                        <nav class="site-navigation ast-flex-grow-1" id="primary-site-navigation-desktop">
+                          <div class="main-navigation ast-inline-flex">
+                            <ul id="ast-hf-menu-1"
+                              class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex submenu-with-border ast-menu-hover-style-overline stack-on-mobile">
+                              <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                <a href="" class="menu-link">Rings</a>
+                              </li>
+                              <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                <a href="" class="menu-link">Bracelets</a>
+                              </li>
+                              <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                <a href="" class="menu-link">Earrings</a>
+                              </li>
+                              <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                                <a href="" class="menu-link">Necklaces</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </nav>
                       </div>
                     </div>
-                  </div>
-                  <div class="site-header-primary-section-center">
-                    <div class="ast-builder-layout-element ast-flex">
-                      <div class="site-branding ast-site-identity">
-                        <span class="site-logo-img"
-                          ><a
-                            href="index.html"
-                            class="custom-logo-link"
-                            rel="home"
-                            ><img
-                              width="117"
-                              height="55"
-                              src="./img/logo-regular.png"
-                              class="custom-logo"
-                              alt="luxury"
-                              decoding="async" /></a
-                        ></span>
-                      </div>
-                    </div>
-                  </div>
-                  <div
-                    class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section"
-                  >
-                    <div
-                      class="ast-builder-menu-2 ast-builder-menu ast-flex ast-builder-menu-2-focus-item ast-builder-layout-element"
-                    >
-                      <div class="ast-main-header-bar-alignment">
-                        <div class="main-header-bar-navigation">
-                          <nav
-                            class="site-navigation ast-flex-grow-1"
-                            id="secondary_menu-site-navigation-desktop"
-                          >
-                            <div class="main-navigation ast-inline-flex">
-                              <ul
-                                class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex submenu-with-border ast-menu-hover-style-overline stack-on-mobile"
-                              >
-                                <li
-                                  class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item"
-                                >
-                                  <a href="index.html" class="menu-link"
-                                    >Home</a
-                                  >
-                                </li>
-                                <li
-                                  class="menu-item menu-item-type-post_type menu-item-object-page"
-                                >
-                                  <a href="" class="menu-link">About</a>
-                                </li>
-                                <li
-                                  class="menu-item menu-item-type-post_type menu-item-object-page"
-                                >
-                                  <a
-                                    href="index.php/contact/index.html"
-                                    class="menu-link"
-                                    >Contact</a
-                                  >
-                                </li>
-                              </ul>
-                            </div>
-                          </nav>
-                        </div>
-                      </div>
-                    </div>
-                    <i class="fa fa-search" aria-hidden="true"></i>
-                    <i class="fa fa-shopping-basket" aria-hidden="true"></i>
                   </div>
                 </div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div id="ast-mobile-header" class="ast-mobile-header-wrap">
-          <div class="ast-main-header-wrap main-header-bar-wrap">
-            <div
-              class="ast-primary-header-bar ast-primary-header main-header-bar site-primary-header-wrap ast-builder-grid-row-layout-default ast-builder-grid-row-tablet-layout-default ast-builder-grid-row-mobile-layout-default"
-            >
-              <div
-                class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center"
-              >
-                <div
-                  class="site-header-primary-section-left site-header-section ast-flex site-header-section-left"
-                >
+                <div class="site-header-primary-section-center">
                   <div class="ast-builder-layout-element ast-flex">
                     <div class="site-branding ast-site-identity">
-                      <span class="site-logo-img"
-                        ><a
-                          href="index.html"
-                          class="custom-logo-link"
-                          rel="home"
-                          aria-current="page"
-                          ><img
-                            width="117"
-                            height="55"
-                            src="./img/logo-regular.png"
-                            class="custom-logo"
-                            alt="luxury"
-                            decoding="async" /></a
-                      ></span>
+                      <span class="site-logo-img"><a href="index.html" class="custom-logo-link" rel="home"><img
+                            width="117" height="55" src="./img/logo-regular.png" class="custom-logo" alt="luxury"
+                            decoding="async" /></a></span>
                     </div>
                   </div>
                 </div>
-                <div
-                  class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section"
-                >
+                <div class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
                   <div
-                    class="ast-builder-layout-element ast-flex"
-                    data-section="section-header-mobile-trigger"
-                  >
-                    <div class="ast-button-wrap">
-                      <button
-                        type="button"
-                        class="menu-toggle main-header-menu-toggle ast-mobile-menu-trigger-minimal"
-                      >
-                        <span class="screen-reader-text">Main Menu</span>
-                        <span class="mobile-menu-toggle-icon">
-                          <span
-                            class="ahfb-svg-iconset ast-inline-flex svg-baseline"
-                          ></span
-                          ><span
-                            class="ahfb-svg-iconset ast-inline-flex svg-baseline"
-                          ></span>
-                        </span>
-                      </button>
+                    class="ast-builder-menu-2 ast-builder-menu ast-flex ast-builder-menu-2-focus-item ast-builder-layout-element">
+                    <div class="ast-main-header-bar-alignment">
+                      <div class="main-header-bar-navigation">
+                        <nav class="site-navigation ast-flex-grow-1" id="secondary_menu-site-navigation-desktop">
+                          <div class="main-navigation ast-inline-flex">
+                            <ul
+                              class="main-header-menu ast-menu-shadow ast-nav-menu ast-flex submenu-with-border ast-menu-hover-style-overline stack-on-mobile">
+                              <li
+                                class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item">
+                                <a href="index.html" class="menu-link">Home</a>
+                              </li>
+                              <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                <a href="" class="menu-link">About</a>
+                              </li>
+                              <li class="menu-item menu-item-type-post_type menu-item-object-page">
+                                <a href="index.php/contact/index.html" class="menu-link">Contact</a>
+                              </li>
+                            </ul>
+                          </div>
+                        </nav>
+                      </div>
                     </div>
                   </div>
+                  <i class="fa fa-search" aria-hidden="true"></i>
+                  <i class="fa fa-shopping-basket" aria-hidden="true"></i>
                 </div>
               </div>
             </div>
-          </div>
-        </div>
-      </header>
-      <div id="content" class="site-content">
-        <div class="ast-container">
-          <div id="primary" class="content-area primary">
-            <main id="main" class="site-main">
-              <div class="ast-woocommerce-container">
-                <div
-                  class="ast-article-single desktop-align-center tablet-align-center mobile-align-center product type-product post-692 status-publish first instock product_cat-bracelets has-post-thumbnail sale shipping-taxable purchasable product-type-simple"
-                >
-                  <div class="box-product">
-                    <ul id="product-gallery">
-                      <li
-                        class="img-thumb"
-                        data-thumb="./img/bracelet-01-a.jpg"
-                      >
-                        <img src="./img/bracelet-01-a.jpg" alt="Image 1" />
-                      </li>
-                      <li
-                        class="img-thumb"
-                        data-thumb="./img/bracelet-01-b.jpg"
-                      >
-                        <img src="./img/bracelet-01-b.jpg" alt="Image 2" />
-                      </li>
-                      <li
-                        class="img-thumb"
-                        data-thumb="./img/bracelet-01-c-600x750.jpg"
-                      >
-                        <img
-                          src="./img/bracelet-01-c-600x750.jpg"
-                          alt="Image 2"
-                        />
-                      </li>
-                      <li class="img-thumb" data-thumb="./img/bracelet-d.jpg">
-                        <img src="./img/bracelet-d.jpg" alt="Image 2" />
-                      </li>
-                    </ul>
-                    <div class="summary entry-summary">
-                      <nav
-                        class="woocommerce-breadcrumb"
-                        aria-label="Breadcrumb"
-                      >
-                        <a href="../../../index.html">Home</a
-                        >&nbsp;&#47;&nbsp;<a
-                          href="../../product-category/bracelets/index.html"
-                          >Bracelets</a
-                        >&nbsp;&#47;&nbsp;Product Name 3
-                      </nav>
-                      <span class="single-product-category"
-                        ><a
-                          href="../../product-category/bracelets/index.html"
-                          rel="tag"
-                          >Bracelets</a
-                        ></span
-                      >
-                      <h1 class="product_title entry-title">Product Name 3</h1>
-                      <div style="display: flex; gap: 1rem">
-                        <p class="price">
-                          <del aria-hidden="true"
-                            ><span class="woocommerce-Price-amount amount"
-                              ><bdi
-                                >1.200&nbsp;<span
-                                  class="woocommerce-Price-currencySymbol"
-                                  >&#36;</span
-                                ></bdi
-                              ></span
-                            ></del
-                          >
-                          <ins
-                            ><span class="woocommerce-Price-amount amount"
-                              ><bdi
-                                >990&nbsp;<span
-                                  class="woocommerce-Price-currencySymbol"
-                                  >&#36;</span
-                                ></bdi
-                              ></span
-                            ></ins
-                          >
-                        </p>
-                        <span
-                          class="ast-shipping-text"
-                          style="padding-top: 0.5rem"
-                          >&amp; Free Shipping</span
-                        >
-                      </div>
-
-                      <div
-                        class="woocommerce-product-details__short-description"
-                      >
-                        <p>
-                          Ut non elit lorem. Duis pharetra odio vitae nisl
-                          luctus, at volutpat arcu lacinia. Aliquam id
-                          ullamcorper augue. Fusce feugiat nibh et nisl mollis
-                          hendrerit. Mauris sit amet nulla in augue laoreet
-                          lobortis ac eleifend nunc. Quisque eleifend
-                          sollicitudin nulla, et consequat eros. Donec
-                          pellentesque dapibus massa ut cursus.
-                        </p>
-                        <p>
-                          Quisque ut augue eu dui semper eleifend. Aliquam
-                          imperdiet nisl libero, vitae vulputate lectus
-                          fringilla eget.
-                        </p>
-                      </div>
-
-                      <form class="cart">
-                        <div class="quantity">
-                          <label class="screen-reader-text"
-                            >Product Name 3 quantity</label
-                          >
-                          <input
-                            type="number"
-                            class="input-text qty text"
-                            value="1"
-                            size="4"
-                            min="1"
-                            max=""
-                            step="1"
-                            placeholder=""
-                            inputmode="numeric"
-                            autocomplete="off"
-                          />
-                        </div>
-
-                        <button
-                          name="add-to-cart"
-                          class="single_add_to_cart_button button alt"
-                        >
-                          Add to cart
-                        </button>
-                      </form>
-
-                      <div class="product_meta">
-                        <span class="posted_in"
-                          >Category:
-                          <a
-                            href="../../product-category/bracelets/index.html"
-                            rel="tag"
-                            >Bracelets</a
-                          ></span
-                        >
-                      </div>
-                    </div>
-                  </div>
-                  <div>
-                    <div class="woocommerce-tabs wc-tabs-wrapper">
-                      <ul class="tabs wc-tabs" role="tablist">
-                        <li
-                          style="cursor: pointer"
-                          class="description_tab"
-                          id="tab-title-description"
-                          role="tab"
-                          aria-controls="tab-description"
-                        >
-                          <a
-                            class="tablinks"
-                            onclick="openCity(event, 'Description')"
-                          >
-                            Description
-                          </a>
-                        </li>
-                        <li
-                          style="cursor: pointer"
-                          class="reviews_tab"
-                          id="tab-title-reviews"
-                          role="tab"
-                          aria-controls="tab-reviews"
-                        >
-                          <a
-                            class="tablinks"
-                            onclick="openCity(event, 'Reviews')"
-                          >
-                            Reviews (0)
-                          </a>
-                        </li>
-                      </ul>
-                      <div
-                        class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab tabcontent"
-                        id="Description"
-                        role="tabpanel"
-                        aria-labelledby="tab-title-description"
-                      >
-                        <p>
-                          Nullam dapibus metus lacinia, vestibulum arcu vitae,
-                          fringilla elit. Maecenas pellentesque justo a bibendum
-                          eleifend. Nunc metus metus, bibendum at quam eget,
-                          congue fermentum diam. Cras rhoncus ex a neque dictum
-                          pellentesque. Cras et placerat est, et feugiat diam.
-                          Aliquam nec odio quis nibh fringilla euismod.
-                        </p>
-                      </div>
-                      <div
-                        style="display: none"
-                        class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab tabcontent"
-                        id="Reviews"
-                        role="tabpanel"
-                        aria-labelledby="tab-title-reviews"
-                      >
-                        <div id="reviews" class="woocommerce-Reviews">
-                          <div id="comments">
-                            <h2 class="woocommerce-Reviews-title">Reviews</h2>
-
-                            <p class="woocommerce-noreviews">
-                              There are no reviews yet.
-                            </p>
-                          </div>
-
-                          <div id="review_form_wrapper">
-                            <div id="review_form">
-                              <div id="respond" class="comment-respond">
-                                <span
-                                  id="reply-title"
-                                  class="comment-reply-title"
-                                  >Be the first to review &ldquo;Product Name
-                                  4&rdquo;
-                                  <small
-                                    ><a
-                                      rel="nofollow"
-                                      id="cancel-comment-reply-link"
-                                      href="index.html#respond"
-                                      style="display: none"
-                                      >Cancel reply</a
-                                    ></small
-                                  ></span
-                                >
-                                <form
-                                  method="post"
-                                  id="commentform"
-                                  class="comment-form"
-                                >
-                                  <p class="comment-notes">
-                                    <span id="email-notes"
-                                      >Your email address will not be
-                                      published.</span
-                                    >
-                                    <span class="required-field-message"
-                                      >Required fields are marked
-                                      <span class="required">*</span></span
-                                    >
-                                  </p>
-                                  <div class="comment-form-rating">
-                                    <label for="rating"
-                                      >Your rating&nbsp;<span class="required"
-                                        >*</span
-                                      ></label
-                                    ><select name="rating" id="rating" required>
-                                      <option value="">Rate&hellip;</option>
-                                      <option value="5">Perfect</option>
-                                      <option value="4">Good</option>
-                                      <option value="3">Average</option>
-                                      <option value="2">Not that bad</option>
-                                      <option value="1">Very poor</option>
-                                    </select>
-                                  </div>
-                                  <p class="comment-form-comment">
-                                    <label for="comment"
-                                      >Your review&nbsp;<span class="required"
-                                        >*</span
-                                      ></label
-                                    ><textarea
-                                      id="comment"
-                                      name="comment"
-                                      cols="45"
-                                      rows="8"
-                                      required
-                                    ></textarea>
-                                  </p>
-                                  <p class="comment-form-author">
-                                    <label for="author"
-                                      >Name&nbsp;<span class="required"
-                                        >*</span
-                                      ></label
-                                    ><input
-                                      id="author"
-                                      name="author"
-                                      type="text"
-                                      value=""
-                                      size="30"
-                                      required
-                                    />
-                                  </p>
-                                  <p class="comment-form-email">
-                                    <label for="email"
-                                      >Email&nbsp;<span class="required"
-                                        >*</span
-                                      ></label
-                                    ><input
-                                      id="email"
-                                      name="email"
-                                      type="email"
-                                      value=""
-                                      size="30"
-                                      required
-                                    />
-                                  </p>
-                                  <p class="comment-form-cookies-consent">
-                                    <input
-                                      id="luEncomment-cookies-consent"
-                                      name="luEncomment-cookies-consent"
-                                      type="checkbox"
-                                      value="yes"
-                                    />
-                                    <label for="luEncomment-cookies-consent"
-                                      >Save my name, email, and website in this
-                                      browser for the next time I
-                                      comment.</label
-                                    >
-                                  </p>
-                                  <p class="form-submit">
-                                    <input
-                                      name="submit"
-                                      type="submit"
-                                      id="submit"
-                                      class="submit"
-                                      value="Submit"
-                                    />
-                                    <input
-                                      type="hidden"
-                                      name="comment_post_ID"
-                                      value="693"
-                                      id="comment_post_ID"
-                                    />
-                                    <input
-                                      type="hidden"
-                                      name="comment_parent"
-                                      id="comment_parent"
-                                      value="0"
-                                    />
-                                  </p>
-                                </form>
-                              </div>
-                              <!-- #respond -->
-                            </div>
-                          </div>
-
-                          <div class="clear"></div>
-                        </div>
-                      </div>
-                    </div>
-                  </div>
-                  <section class="related products">
-                    <h2>Related products</h2>
-                    <div class="woocommerce columns-4">
-                      <ul class="products columns-4" id="productList"></ul>
-                    </div>
-                  </section>
-                </div>
-              </div>
-            </main>
           </div>
         </div>
       </div>
-      <footer class="site-footer">
-        <div
-          class="site-primary-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-4-equal ast-builder-grid-row-tablet-4-equal ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack"
-        >
-          <div class="ast-builder-grid-row-container-inner">
-            <div
-              class="ast-builder-footer-grid-columns ast-container ast-builder-grid-row"
-            >
-              <div
-                class="site-footer-primary-section-1 site-footer-section site-footer-section-1"
-              >
-                <aside
-                  class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner"
-                >
-                  <section id="block-7" class="widget widget_block">
-                    <div
-                      class="LuEn-block-uagb-image uagb-block-7fa7df1d LuEn-block-uagb-image--layout-default LuEn-block-uagb-image--effect-static LuEn-block-uagb-image--align-none"
-                    >
-                      <figure class="LuEn-block-uagb-image__figure">
-                        <img
-                          decoding="async"
-                          sizes="(max-width: 480px) 150px"
-                          src="./img/logo-regular.png"
-                          alt
-                          class="uag-image-65"
-                          width="117"
-                          height="55"
-                          title
-                          loading="lazy"
-                        />
-                      </figure>
-                    </div>
-                  </section>
-                </aside>
-              </div>
-              <div
-                class="site-footer-primary-section-2 site-footer-section site-footer-section-2"
-              >
-                <aside
-                  class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner"
-                >
-                  <section id="block-8" class="widget widget_block">
-                    <div
-                      class="LuEn-block-uagb-advanced-heading uagb-block-2752f90d"
-                    >
-                      <h6 class="uagb-heading-text">about us</h6>
-                    </div>
-                  </section>
-                  <section id="nav_menu-1" class="widget widget_nav_menu">
-                    <nav class="menu-menu-2-container" aria-label="Menu">
-                      <ul id="menu-menu-2" class="menu">
-                        <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-1095"
-                        >
-                          <a
-                            href="index.html"
-                            aria-current="page"
-                            class="menu-link"
-                            >Home</a
-                          >
-                        </li>
-                        <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-474"
-                        >
-                          <a href="index.php/about/index.html" class="menu-link"
-                            >About</a
-                          >
-                        </li>
-                        <li
-                          class="menu-item menu-item-type-post_type menu-item-object-page menu-item-475"
-                        >
-                          <a
-                            href="index.php/contact/index.html"
-                            class="menu-link"
-                            >Contact</a
-                          >
-                        </li>
-                      </ul>
-                    </nav>
-                  </section>
-                </aside>
-              </div>
-              <div
-                class="site-footer-primary-section-3 site-footer-section site-footer-section-3"
-              >
-                <aside
-                  class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner"
-                >
-                  <section id="block-9" class="widget widget_block">
-                    <div
-                      class="LuEn-block-uagb-advanced-heading uagb-block-bb5edab1"
-                    >
-                      <h6 class="uagb-heading-text">shop</h6>
-                    </div>
-                  </section>
-                  <section id="nav_menu-2" class="widget widget_nav_menu">
-                    <nav class="menu-menu-1-container" aria-label="Menu">
-                      <ul id="menu-menu-1" class="menu">
-                        <li
-                          class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
-                        >
-                          <a href="" class="menu-link">Rings</a>
-                        </li>
-                        <li
-                          class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
-                        >
-                          <a href="" class="menu-link">Bracelets</a>
-                        </li>
-                        <li
-                          class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
-                        >
-                          <a href="" class="menu-link">Earrings</a>
-                        </li>
-                        <li
-                          class="menu-item menu-item-type-taxonomy menu-item-object-product_cat"
-                        >
-                          <a href="" class="menu-link">Necklaces</a>
-                        </li>
-                      </ul>
-                    </nav>
-                  </section>
-                </aside>
-              </div>
-              <div
-                class="site-footer-primary-section-4 site-footer-section site-footer-section-4"
-              >
-                <aside
-                  class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner"
-                  data-section="sidebar-widgets-footer-widget-4"
-                  aria-label="Footer Widget 4"
-                >
-                  <section id="block-10" class="widget widget_block">
-                    <div
-                      class="LuEn-block-uagb-advanced-heading uagb-block-3e8bce46"
-                    >
-                      <h6 class="uagb-heading-text">address</h6>
-                    </div>
-                  </section>
-                  <section id="block-11" class="widget widget_block">
-                    <p>
-                      <a href="#">123 Fifth Avenue, New York,<br />NY 10160</a
-                      ><br />
-                      <a href="#">contact@info.com</a><br />
-                      929-242-6868
-                    </p>
-                  </section>
-                </aside>
+      <div id="ast-mobile-header" class="ast-mobile-header-wrap">
+        <div class="ast-builder-grid-row">
+          <div class="site-header-primary-section-left">
+            <div class="ast-builder-layout-element ast-flex">
+              <div class="site-branding ast-site-identity">
+                <span class="site-logo-img"><a href="index.html" class="custom-logo-link" rel="home"
+                    aria-current="page"><img width="117" height="55" src="./img/logo-regular.png" class="custom-logo"
+                      alt="luxury" decoding="async" /></a></span>
               </div>
             </div>
           </div>
-        </div>
-        <div
-          class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-full ast-builder-grid-row-tablet-full ast-builder-grid-row-mobile-full ast-footer-row-inline ast-footer-row-tablet-inline ast-footer-row-mobile-inline"
-          data-section="section-below-footer-builder"
-        >
-          <div class="ast-builder-grid-row-container-inner">
-            <div
-              class="ast-builder-footer-grid-columns site-below-footer-inner-wrap ast-builder-grid-row"
-            >
-              <div
-                class="site-footer-below-section-1 site-footer-section site-footer-section-1"
-              >
-                <div
-                  class="ast-builder-layout-element ast-flex site-footer-focus-item ast-footer-copyright"
-                  data-section="section-footer-builder"
-                >
-                  <div class="ast-footer-copyright">
-                    <p>Copyright &copy; 2024 luxury | Powered by luxury</p>
+          <div class="ast-flex ast-grid-right-section">
+            <div class="" data-section="section-header-mobile-trigger">
+              <div class="ast-button-wrap">
+                <div class="dropdown">
+                  <button style="border: none !important;" onclick="toggleDropdown()" type="button"
+                    class=" dropbtn menu-toggle main-header-menu-toggle ast-mobile-menu-trigger-minimal">
+                    <i id="dropdownIcon" class="fa fa-bars" aria-hidden="true"></i>
+                  </button>
+                  <div id="myDropdown" class="dropdown-content">
+                    <a href="./product.html">RINGS</a>
+                    <a href="./product.html">BRACELETS</a>
+                    <a href="./product.html">EARINGS</a>
+                    <a href="./product.html">EARINGS</a>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
-      </footer>
+      </div>
+    </header>
+    <div id="content" class="site-content">
+      <div class="ast-container">
+        <div id="primary" class="content-area primary">
+          <main id="main" class="site-main">
+            <div class="ast-woocommerce-container">
+              <div
+                class="ast-article-single desktop-align-center tablet-align-center mobile-align-center product type-product post-692 status-publish first instock product_cat-bracelets has-post-thumbnail sale shipping-taxable purchasable product-type-simple">
+                <div class="box-product">
+                  <ul id="product-gallery">
+                    <li class="img-thumb" data-thumb="./img/bracelet-01-a.jpg">
+                      <img src="./img/bracelet-01-a.jpg" alt="Image 1" />
+                    </li>
+                    <li class="img-thumb" data-thumb="./img/bracelet-01-b.jpg">
+                      <img src="./img/bracelet-01-b.jpg" alt="Image 2" />
+                    </li>
+                    <li class="img-thumb" data-thumb="./img/bracelet-01-c-600x750.jpg">
+                      <img src="./img/bracelet-01-c-600x750.jpg" alt="Image 2" />
+                    </li>
+                    <li class="img-thumb" data-thumb="./img/bracelet-d.jpg">
+                      <img src="./img/bracelet-d.jpg" alt="Image 2" />
+                    </li>
+                  </ul>
+                  <div class="summary entry-summary">
+                    <nav class="woocommerce-breadcrumb" aria-label="Breadcrumb">
+                      <a href="../../../index.html">Home</a>&nbsp;&#47;&nbsp;<a
+                        href="../../product-category/bracelets/index.html">Bracelets</a>&nbsp;&#47;&nbsp;Product Name 3
+                    </nav>
+                    <span class="single-product-category"><a href="../../product-category/bracelets/index.html"
+                        rel="tag">Bracelets</a></span>
+                    <h1 class="product_title entry-title">Product Name 3</h1>
+                    <div style="display: flex; gap: 1rem">
+                      <p class="price">
+                        <del aria-hidden="true"><span class="woocommerce-Price-amount amount"><bdi>1.200&nbsp;<span
+                                class="woocommerce-Price-currencySymbol">&#36;</span></bdi></span></del>
+                        <ins><span class="woocommerce-Price-amount amount"><bdi>990&nbsp;<span
+                                class="woocommerce-Price-currencySymbol">&#36;</span></bdi></span></ins>
+                      </p>
+                      <span class="ast-shipping-text" style="padding-top: 0.5rem">&amp; Free Shipping</span>
+                    </div>
+
+                    <div class="woocommerce-product-details__short-description">
+                      <p>
+                        Ut non elit lorem. Duis pharetra odio vitae nisl
+                        luctus, at volutpat arcu lacinia. Aliquam id
+                        ullamcorper augue. Fusce feugiat nibh et nisl mollis
+                        hendrerit. Mauris sit amet nulla in augue laoreet
+                        lobortis ac eleifend nunc. Quisque eleifend
+                        sollicitudin nulla, et consequat eros. Donec
+                        pellentesque dapibus massa ut cursus.
+                      </p>
+                      <p>
+                        Quisque ut augue eu dui semper eleifend. Aliquam
+                        imperdiet nisl libero, vitae vulputate lectus
+                        fringilla eget.
+                      </p>
+                    </div>
+
+                    <form class="cart">
+                      <div class="quantity">
+                        <label class="screen-reader-text">Product Name 3 quantity</label>
+                        <input type="number" class="input-text qty text" value="1" size="4" min="1" max="" step="1"
+                          placeholder="" inputmode="numeric" autocomplete="off" />
+                      </div>
+
+                      <button name="add-to-cart" class="single_add_to_cart_button button alt">
+                        Add to cart
+                      </button>
+                    </form>
+
+                    <div class="product_meta">
+                      <span class="posted_in">Category:
+                        <a href="../../product-category/bracelets/index.html" rel="tag">Bracelets</a></span>
+                    </div>
+                  </div>
+                </div>
+                <div>
+                  <div class="woocommerce-tabs wc-tabs-wrapper">
+                    <ul class="tabs wc-tabs" role="tablist">
+                      <li style="cursor: pointer" class="description_tab" id="tab-title-description" role="tab"
+                        aria-controls="tab-description">
+                        <a class="tablinks" onclick="openCity(event, 'Description')">
+                          Description
+                        </a>
+                      </li>
+                      <li style="cursor: pointer" class="reviews_tab" id="tab-title-reviews" role="tab"
+                        aria-controls="tab-reviews">
+                        <a class="tablinks" onclick="openCity(event, 'Reviews')">
+                          Reviews (0)
+                        </a>
+                      </li>
+                    </ul>
+                    <div
+                      class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab tabcontent"
+                      id="Description" role="tabpanel" aria-labelledby="tab-title-description">
+                      <p>
+                        Nullam dapibus metus lacinia, vestibulum arcu vitae,
+                        fringilla elit. Maecenas pellentesque justo a bibendum
+                        eleifend. Nunc metus metus, bibendum at quam eget,
+                        congue fermentum diam. Cras rhoncus ex a neque dictum
+                        pellentesque. Cras et placerat est, et feugiat diam.
+                        Aliquam nec odio quis nibh fringilla euismod.
+                      </p>
+                    </div>
+                    <div style="display: none"
+                      class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab tabcontent"
+                      id="Reviews" role="tabpanel" aria-labelledby="tab-title-reviews">
+                      <div id="reviews" class="woocommerce-Reviews">
+                        <div id="comments">
+                          <h2 class="woocommerce-Reviews-title">Reviews</h2>
+
+                          <p class="woocommerce-noreviews">
+                            There are no reviews yet.
+                          </p>
+                        </div>
+
+                        <div id="review_form_wrapper">
+                          <div id="review_form">
+                            <div id="respond" class="comment-respond">
+                              <span id="reply-title" class="comment-reply-title">Be the first to review &ldquo;Product
+                                Name
+                                4&rdquo;
+                                <small><a rel="nofollow" id="cancel-comment-reply-link" href="index.html#respond"
+                                    style="display: none">Cancel reply</a></small></span>
+                              <form method="post" id="commentform" class="comment-form">
+                                <p class="comment-notes">
+                                  <span id="email-notes">Your email address will not be
+                                    published.</span>
+                                  <span class="required-field-message">Required fields are marked
+                                    <span class="required">*</span></span>
+                                </p>
+                                <div class="comment-form-rating">
+                                  <label for="rating">Your rating&nbsp;<span class="required">*</span></label><select
+                                    name="rating" id="rating" required>
+                                    <option value="">Rate&hellip;</option>
+                                    <option value="5">Perfect</option>
+                                    <option value="4">Good</option>
+                                    <option value="3">Average</option>
+                                    <option value="2">Not that bad</option>
+                                    <option value="1">Very poor</option>
+                                  </select>
+                                </div>
+                                <p class="comment-form-comment">
+                                  <label for="comment">Your review&nbsp;<span class="required">*</span></label><textarea
+                                    id="comment" name="comment" cols="45" rows="8" required></textarea>
+                                </p>
+                                <p class="comment-form-author">
+                                  <label for="author">Name&nbsp;<span class="required">*</span></label><input
+                                    id="author" name="author" type="text" value="" size="30" required />
+                                </p>
+                                <p class="comment-form-email">
+                                  <label for="email">Email&nbsp;<span class="required">*</span></label><input id="email"
+                                    name="email" type="email" value="" size="30" required />
+                                </p>
+                                <p class="comment-form-cookies-consent">
+                                  <input id="luEncomment-cookies-consent" name="luEncomment-cookies-consent"
+                                    type="checkbox" value="yes" />
+                                  <label for="luEncomment-cookies-consent">Save my name, email, and website in this
+                                    browser for the next time I
+                                    comment.</label>
+                                </p>
+                                <p class="form-submit">
+                                  <input name="submit" type="submit" id="submit" class="submit" value="Submit" />
+                                  <input type="hidden" name="comment_post_ID" value="693" id="comment_post_ID" />
+                                  <input type="hidden" name="comment_parent" id="comment_parent" value="0" />
+                                </p>
+                              </form>
+                            </div>
+                            <!-- #respond -->
+                          </div>
+                        </div>
+
+                        <div class="clear"></div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <section class="related products">
+                  <h2>Related products</h2>
+                  <div class="woocommerce">
+                    <ul class="products box-production" id="productList"></ul>
+                  </div>
+                </section>
+              </div>
+            </div>
+          </main>
+        </div>
+      </div>
     </div>
+    <footer class="site-footer">
+      <div
+        class="site-primary-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-4-equal ast-builder-grid-row-tablet-4-equal ast-builder-grid-row-mobile-full ast-footer-row-stack ast-footer-row-tablet-stack ast-footer-row-mobile-stack">
+        <div class="ast-builder-grid-row-container-inner">
+          <div class="ast-builder-footer-grid-columns ast-container ast-builder-grid-row">
+            <div class="site-footer-primary-section-1 site-footer-section site-footer-section-1">
+              <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner">
+                <section id="block-7" class="widget widget_block">
+                  <div
+                    class="LuEn-block-uagb-image uagb-block-7fa7df1d LuEn-block-uagb-image--layout-default LuEn-block-uagb-image--effect-static LuEn-block-uagb-image--align-none">
+                    <figure class="LuEn-block-uagb-image__figure">
+                      <img decoding="async" sizes="(max-width: 480px) 150px" src="./img/logo-regular.png" alt
+                        class="uag-image-65" width="117" height="55" title loading="lazy" />
+                    </figure>
+                  </div>
+                </section>
+              </aside>
+            </div>
+            <div class="site-footer-primary-section-2 site-footer-section site-footer-section-2">
+              <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner">
+                <section id="block-8" class="widget widget_block">
+                  <div class="LuEn-block-uagb-advanced-heading uagb-block-2752f90d">
+                    <h6 class="uagb-heading-text">about us</h6>
+                  </div>
+                </section>
+                <section id="nav_menu-1" class="widget widget_nav_menu">
+                  <nav class="menu-menu-2-container" aria-label="Menu">
+                    <ul id="menu-menu-2" class="menu">
+                      <li
+                        class="menu-item menu-item-type-post_type menu-item-object-page menu-item-home current-menu-item page_item page-item-2 current_page_item menu-item-1095">
+                        <a href="index.html" aria-current="page" class="menu-link">Home</a>
+                      </li>
+                      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-474">
+                        <a href="index.php/about/index.html" class="menu-link">About</a>
+                      </li>
+                      <li class="menu-item menu-item-type-post_type menu-item-object-page menu-item-475">
+                        <a href="index.php/contact/index.html" class="menu-link">Contact</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </section>
+              </aside>
+            </div>
+            <div class="site-footer-primary-section-3 site-footer-section site-footer-section-3">
+              <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner">
+                <section id="block-9" class="widget widget_block">
+                  <div class="LuEn-block-uagb-advanced-heading uagb-block-bb5edab1">
+                    <h6 class="uagb-heading-text">shop</h6>
+                  </div>
+                </section>
+                <section id="nav_menu-2" class="widget widget_nav_menu">
+                  <nav class="menu-menu-1-container" aria-label="Menu">
+                    <ul id="menu-menu-1" class="menu">
+                      <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                        <a href="" class="menu-link">Rings</a>
+                      </li>
+                      <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                        <a href="" class="menu-link">Bracelets</a>
+                      </li>
+                      <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                        <a href="" class="menu-link">Earrings</a>
+                      </li>
+                      <li class="menu-item menu-item-type-taxonomy menu-item-object-product_cat">
+                        <a href="" class="menu-link">Necklaces</a>
+                      </li>
+                    </ul>
+                  </nav>
+                </section>
+              </aside>
+            </div>
+            <div class="site-footer-primary-section-4 site-footer-section site-footer-section-4">
+              <aside class="footer-widget-area widget-area site-footer-focus-item footer-widget-area-inner"
+                data-section="sidebar-widgets-footer-widget-4" aria-label="Footer Widget 4">
+                <section id="block-10" class="widget widget_block">
+                  <div class="LuEn-block-uagb-advanced-heading uagb-block-3e8bce46">
+                    <h6 class="uagb-heading-text">address</h6>
+                  </div>
+                </section>
+                <section id="block-11" class="widget widget_block">
+                  <p>
+                    <a href="#">123 Fifth Avenue, New York,<br />NY 10160</a><br />
+                    <a href="#">contact@info.com</a><br />
+                    929-242-6868
+                  </p>
+                </section>
+              </aside>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div
+        class="site-below-footer-wrap ast-builder-grid-row-container site-footer-focus-item ast-builder-grid-row-full ast-builder-grid-row-tablet-full ast-builder-grid-row-mobile-full ast-footer-row-inline ast-footer-row-tablet-inline ast-footer-row-mobile-inline"
+        data-section="section-below-footer-builder">
+        <div class="ast-builder-grid-row-container-inner">
+          <div class="ast-builder-footer-grid-columns site-below-footer-inner-wrap ast-builder-grid-row">
+            <div class="site-footer-below-section-1 site-footer-section site-footer-section-1">
+              <div class="ast-builder-layout-element ast-flex site-footer-focus-item ast-footer-copyright"
+                data-section="section-footer-builder">
+                <div class="ast-footer-copyright">
+                  <p>Copyright &copy; 2024 luxury | Powered by luxury</p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+  </div>
 
-    <script>
-      (function () {
-        var c = document.body.className;
-        c = c.replace(/woocommerce-no-js/, "woocommerce-js");
-        document.body.className = c;
-      })();
-    </script>
+  <script>
+    (function () {
+      var c = document.body.className;
+      c = c.replace(/woocommerce-no-js/, "woocommerce-js");
+      document.body.className = c;
+    })();
+  </script>
 
-    <script>
-      var products = [
-        {
-          name: "Product Name 1",
-          originalPrice: 600,
-          discountedPrice: 495,
-          linkImg: "./img/product1.jpg",
-          linkImg2: "./img/bracelet-01-b.jpg",
-        },
-        {
-          name: "Product Name 2",
-          originalPrice: 700,
-          discountedPrice: 599,
-          linkImg: "./img/product1.jpg",
-          linkImg2: "./img/bracelet-01-b.jpg",
-        },
-        {
-          name: "Product Name 2",
-          originalPrice: 700,
-          discountedPrice: 599,
-          linkImg: "./img/product1.jpg",
-          linkImg2: "./img/bracelet-01-b.jpg",
-        },
-      ];
+  <script>
+    var products = [
+      {
+        name: "Product Name 1",
+        originalPrice: 600,
+        discountedPrice: 495,
+        linkImg: "./img/product1.jpg",
+        linkImg2: "./img/bracelet-01-b.jpg",
+      },
+      {
+        name: "Product Name 2",
+        originalPrice: 700,
+        discountedPrice: 599,
+        linkImg: "./img/product1.jpg",
+        linkImg2: "./img/bracelet-01-b.jpg",
+      },
+      {
+        name: "Product Name 2",
+        originalPrice: 700,
+        discountedPrice: 599,
+        linkImg: "./img/product1.jpg",
+        linkImg2: "./img/bracelet-01-b.jpg",
+      },
+    ];
 
-      var productList = document.getElementById("productList");
+    var productList = document.getElementById("productList");
 
-      products.forEach(function (product) {
-        var li = document.createElement("li");
-        li.classList.add("product");
-        li.innerHTML = `<div class="astra-shop-thumbnail-wrap">
+    products.forEach(function (product) {
+      var li = document.createElement("li");
+      li.classList.add("product");
+      li.innerHTML = `<div class="astra-shop-thumbnail-wrap">
                 <a href=""class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
                     <img src="${product.linkImg}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt />
                     <img src="${product.linkImg2}" class="show-on-hover"/></a>
@@ -848,70 +535,72 @@
                             class="woocommerce-Price-amount amount"><bdi>${product.originalPrice}</bdi></span></del>
                     <ins><span class="woocommerce-Price-amount amount"><bdi>${product.originalPrice}</bdi></span></ins></span>
             </div>`;
-        productList.appendChild(li);
-      });
-    </script>
+      productList.appendChild(li);
+    });
+  </script>
 
-    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 
-    <script>
-      var swiper = new Swiper(".mySwiper", {
+  <script>
+    var swiper = new Swiper(".mySwiper", {
+      loop: true,
+      spaceBetween: 10,
+      slidesPerView: 4,
+      freeMode: true,
+      watchSlidesProgress: true,
+    });
+    var swiper2 = new Swiper(".mySwiper2", {
+      loop: true,
+      spaceBetween: 10,
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+      thumbs: {
+        swiper: swiper,
+      },
+    });
+  </script>
+
+  <script>
+    $(document).ready(function () {
+      $("#product-gallery").lightSlider({
+        gallery: true,
+        item: 1,
         loop: true,
-        spaceBetween: 10,
-        slidesPerView: 4,
-        freeMode: true,
-        watchSlidesProgress: true,
-      });
-      var swiper2 = new Swiper(".mySwiper2", {
-        loop: true,
-        spaceBetween: 10,
-        navigation: {
-          nextEl: ".swiper-button-next",
-          prevEl: ".swiper-button-prev",
-        },
-        thumbs: {
-          swiper: swiper,
+        thumbItem: 4,
+        slideMargin: 0,
+        enableDrag: false,
+        currentPagerPosition: "left",
+        onSliderLoad: function (el) {
+          el.lightGallery({
+            selector: "#product-gallery .lslide",
+          });
         },
       });
-    </script>
+    });
+  </script>
 
-    <script>
-      $(document).ready(function () {
-        $("#product-gallery").lightSlider({
-          gallery: true,
-          item: 1,
-          loop: true,
-          thumbItem: 4,
-          slideMargin: 0,
-          enableDrag: false,
-          currentPagerPosition: "left",
-          onSliderLoad: function (el) {
-            el.lightGallery({
-              selector: "#product-gallery .lslide",
-            });
-          },
-        });
-      });
-    </script>
+  <script>
+    window.onload = function () {
+      document.getElementsByClassName("tablinks")[0].className += " active";
+    };
 
-    <script>
-      window.onload = function () {
-        document.getElementsByClassName("tablinks")[0].className += " active";
-      };
-
-      function openCity(evt, cityName) {
-        var i, tabcontent, tablinks;
-        tabcontent = document.getElementsByClassName("tabcontent");
-        for (i = 0; i < tabcontent.length; i++) {
-          tabcontent[i].style.display = "none";
-        }
-        tablinks = document.getElementsByClassName("tablinks");
-        for (i = 0; i < tablinks.length; i++) {
-          tablinks[i].className = tablinks[i].className.replace(" active", "");
-        }
-        document.getElementById(cityName).style.display = "block";
-        evt.currentTarget.className += " active";
+    function openCity(evt, cityName) {
+      var i, tabcontent, tablinks;
+      tabcontent = document.getElementsByClassName("tabcontent");
+      for (i = 0; i < tabcontent.length; i++) {
+        tabcontent[i].style.display = "none";
       }
-    </script>
-  </body>
+      tablinks = document.getElementsByClassName("tablinks");
+      for (i = 0; i < tablinks.length; i++) {
+        tablinks[i].className = tablinks[i].className.replace(" active", "");
+      }
+      document.getElementById(cityName).style.display = "block";
+      evt.currentTarget.className += " active";
+    }
+  </script>
+  <script src="./js/dropdown.js"></script>
+</body>
+
 </html>

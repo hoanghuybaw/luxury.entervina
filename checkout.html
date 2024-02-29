@@ -4,287 +4,109 @@
 <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="robots" content="max-image-preview:large" />
+    <link rel="stylesheet" href="./css/main.css" media="all" />
+    <link rel="stylesheet" id="astra-google-fonts-css"
+        href="https://fonts.googleapis.com/css?family=Roboto%3A300%2C%7CCinzel%3Anormal%2C%7CRoboto+Condensed%3A400&amp;display=fallback&amp;ver=4.6.5"
+        media="all" />
+    <link rel="stylesheet" id="astra-theme-css-css" href="./css/main_1.css" media="all" />
+    <link rel="stylesheet" href="./css/woocommerce/woocommerce-grid.min1dc6.css" />
+    <link rel="stylesheet" href="./css/woocommerce/woocommerce-layout-grid.min1dc6.css" />
+    <link rel="stylesheet" href="./css/woocommerce/woocommerce-smallscreen-grid.min1dc6.css" />
+    <link rel="stylesheet" href="./css/woocommerce/uag-css-263b9.css" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
+    <link href="https://unpkg.com/slim-select@latest/dist/slimselect.css" rel="stylesheet">
+    <link rel="stylesheet" href="./css/dropdown.css">
+    <title>luxury</title>
+    <style>
+        .grid-col-2 {
+            display: grid;
+            grid-template-columns: repeat(2, 1fr);
+            gap: 2rem
+        }
 
-    <head>
-        <meta charset="UTF-8" />
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta name="robots" content="max-image-preview:large" />
-        <link rel="stylesheet" href="./css/main.css" media="all" />
-        <link rel="stylesheet" id="astra-google-fonts-css"
-            href="https://fonts.googleapis.com/css?family=Roboto%3A300%2C%7CCinzel%3Anormal%2C%7CRoboto+Condensed%3A400&amp;display=fallback&amp;ver=4.6.5"
-            media="all" />
-        <link rel="stylesheet" id="astra-theme-css-css" href="./css/main_1.css" media="all" />
-        <link rel="stylesheet" href="./css/woocommerce/woocommerce-grid.min1dc6.css" />
-        <link rel="stylesheet" href="./css/woocommerce/woocommerce-layout-grid.min1dc6.css" />
-        <link rel="stylesheet" href="./css/woocommerce/woocommerce-smallscreen-grid.min1dc6.css" />
-        <link rel="stylesheet" href="./css/woocommerce/uag-css-263b9.css" />
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" />
-        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
-        <link rel="stylesheet"
-            href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" />
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
-        <link rel="stylesheet" href="./css/dropdown.css">
-        <title>Document</title>
-        <style>
-            .grid-col-2 {
-                display: grid;
-                grid-template-columns: repeat(2, 1fr);
-                gap: 2rem;
-            }
+        .w-100 {
+            width: 100%;
+        }
 
-            .box-contact .item-1 {
-                padding-right: 5rem;
-                padding-top: 5rem;
-            }
+        .mt-2 {
+            margin-top: 1rem;
+        }
 
-            .box-contact .item-2 .item-2-form {
-                width: 80%;
-                background: #faf5f0;
-                padding: 50px;
-                margin-top: -50px;
-                position: relative;
-            }
+        .box-checkout p {
+            line-height: 2;
+            font-weight: 700;
+            font-size: .9em;
+            margin-bottom: 0;
+        }
 
-            .box-contact .item-2 {
+        .box-checkout {
+            display: grid;
+            grid-template-columns: 4fr 3fr;
+            gap: 5rem
+        }
+
+        .requied {
+            color: red
+        }
+
+        .title-form {
+            font-weight: 700;
+            font-size: 1.2rem;
+            border-bottom: 1px solid #ddd;
+            padding-bottom: 1rem;
+            margin-bottom: 0;
+        }
+
+        .box-order {
+            border: 1px solid #ddd;
+            padding: 2em;
+        }
+
+        .item-order {
+            padding: 14px 0;
+            border-bottom: 1px solid #ddd
+        }
+
+        .mt-0 {
+            margin-top: 0
+        }
+
+        .ml-2 {
+            margin-left: 0.5rem;
+        }
+
+        .mr-2 {
+            margin-right: 0.5rem;
+        }
+
+        .payment-box {
+            margin-top: 1rem;
+            padding: 1em;
+            background: #efefef;
+        }
+
+        .payment-box::before {
+            content: '';
+            display: block;
+            border: 1em solid #dfdcde;
+            border-right-color: transparent;
+            border-left-color: transparent;
+            border-top-color: transparent;
+            position: absolute;
+            top: -1em;
+            left: 0;
+            margin: -1em 0 0 2em
+        }
+
+        @media (max-width: 921px) {
+            .box-checkout {
                 display: flex;
-                justify-content: end;
+                flex-direction: column;
             }
-
-            .w-100 {
-                width: 100%;
-            }
-
-            .pt-2 {
-                padding-top: 2rem;
-            }
-
-            .pr-1 {
-                padding-right: 0.5rem;
-            }
-
-            .mr-2 {
-                margin-right: 1rem !important;
-            }
-
-            .ml-2 {
-                margin-right: 1rem !important;
-            }
-
-            .mr-4 {
-                margin-right: 2rem !important;
-            }
-
-            .ml-4 {
-                margin-left: 2rem !important;
-            }
-
-            .mb-4 {
-                margin-bottom: 2rem !important;
-            }
-
-            .pt-1 {
-                padding-top: 0.5rem;
-            }
-
-            .mt-1 {
-                margin-top: 1rem;
-            }
-
-            .contact-label {
-                font-size: 18px;
-                color: #000;
-            }
-
-            @media (max-width: 768px) {
-                .box-contact {
-                    grid-template-columns: repeat(1, 1fr);
-                }
-
-                .box-contact .item-2 .item-2-form {
-                    margin-top: unset;
-                    width: 100%;
-                }
-
-                .box-contact .item-1 {
-                    text-align: center;
-                    padding-right: unset
-                }
-            }
-
-            table th {
-                border-width: none;
-                border-right: none;
-                text-align: left;
-            }
-
-            table td {
-                border-width: none;
-                border-right: none
-            }
-
-            table td:last-child {
-                border-right: 1px solid #ddd
-            }
-
-            table th:last-child {
-                border-right: 1px solid #ddd
-            }
-
-            @media (max-width: 921px) {
-                table {
-                    display: block;
-                    width: 100%;
-                    overflow-x: auto;
-                    -webkit-overflow-scrolling: touch;
-                }
-
-                thead,
-                tbody,
-                tr,
-                td,
-                th {
-                    display: block;
-                }
-
-                thead tr {
-                    position: absolute;
-                    top: -9999px;
-                    left: -9999px;
-                }
-
-                tr {
-                    border: 1px solid #ccc;
-                }
-
-                td {
-                    border-bottom: 1px solid #ccc;
-                    position: relative;
-                    text-align: right;
-                }
-
-                td:before {
-                    position: absolute;
-                    top: 6px;
-                    left: 6px;
-                    width: 20%;
-                    padding-right: 10px;
-                    white-space: nowrap;
-                    content: attr(data-title);
-                    display: flex;
-                }
-
-                .card-total .card-item {
-                    width: 100% !important;
-                }
-
-                .product-remove {
-                    text-align: right !important;
-                }
-            }
-
-            .product-remove {
-                text-align: center;
-            }
-
-            .card-total .card-item {
-                border: 1px solid #ddd;
-                width: 48%;
-            }
-
-            .card-total .card-header {
-                padding: 1rem 2rem;
-            }
-
-            .card-total .card-header h5 {
-                margin: 0;
-            }
-
-            .card-total {
-                display: flex;
-                justify-content: end;
-            }
-
-            .card-total .card-footer {
-                justify-content: center;
-                display: flex;
-            }
-
-            .card-total .card-footer button {
-                width: 100%;
-                margin: 0 1rem 1rem 1rem;
-            }
-
-            .box-coupon {
-                display: flex;
-                justify-content: space-between
-            }
-
-            @media (max-width: 600px) {
-                .box-coupon {
-                    display: flex;
-                    flex-direction: column;
-                }
-
-                .box-coupon-input {
-                    width: 100%;
-                    align-items: center;
-                }
-
-                .box-coupon-input .input-text {
-                    width: 48%;
-                    margin-right: 5px;
-                }
-
-                .box-coupon-input .button {
-                    width: 48%;
-                }
-
-                .box-coupon .button-update {
-                    margin-top: 1rem;
-                    padding: 10px 15px 10px 15px !important;
-                }
-            }
-
-            .product-quantity .input-text {
-                padding: 0.2rem;
-                width: 2.631em;
-                text-align: center;
-                height: 35px;
-                border-top: 1px solid #ddd;
-                border-bottom: 1px solid #ddd;
-                border-left: unset;
-                border-right: unset;
-                background: #fff;
-                vertical-align: middle
-            }
-
-            .quantity {
-                display: inline-flex !important;
-            }
-
-            .quantity .minus,
-            .quantity .plus {
-                width: 38px;
-                display: flex;
-                justify-content: center;
-                background-color: transparent;
-                border: 1px solid var(--ast-border-color);
-                color: var(--ast-global-color-3);
-                align-items: center;
-                outline: 0;
-                font-weight: 400;
-                z-index: 3;
-            }
-
-            input[type=number]::-webkit-inner-spin-button,
-            input[type=number]::-webkit-outer-spin-button {
-                -webkit-appearance: none;
-                appearance: none;
-                margin: 0;
-            }
-        </style>
-    </head>
+        }
+    </style>
+</head>
 
 <body
     class="home page-template-default page page-id-2 LuEn-custom-logo theme-astra woocommerce-no-js ast-desktop ast-plain-container ast-no-sidebar astra-4.6.5 ast-single-post ast-inherit-site-logo-transparent ast-hfb-header astra-addon-4.0.1">
@@ -410,92 +232,194 @@
                 </div>
             </div>
         </header>
-        <div id="" class="ast-container" style="margin-top: 5rem; margin-bottom: 5rem;">
-            <header class="entry-header ">
-                <h1 class="entry-title" itemprop="headline">Cart</h1>
-            </header>
-            <table class="" cellspacing="0">
-                <thead>
-                    <tr>
-                        <th class="product-remove"></th>
-                        <th class="product-thumbnail"></th>
-                        <th class="product-name">Product</th>
-                        <th class="product-price">Price</th>
-                        <th class="product-quantity">Quantity</th>
-                        <th class="product-subtotal">Subtotal</th>
-                    </tr>
-                </thead>
-                <tbody>
-                    <tr class="">
-                        <td class="product-remove">
-                            <i class="fa fa-times-circle-o" aria-hidden="true"></i>
-                        </td>
-                        <td class="product-thumbnail">
-                            <img fetchpriority="high" width="300" height="300"
-                                src="https://luxury.entervina.com/wp-content/uploads/2022/08/bracelet-01-a-300x300.jpg"
-                                class="" alt="" style="max-width: 70px;">
-                        </td>
-                        <td class="product-name" data-title="Product">
-                            Product Name 1
-                        </td>
-                        <td class="product-price" data-title="Price">
-                            <span class=""><bdi>495 $</bdi></span>
-                        </td>
-                        <td class="product-quantity">
-                            <div class="quantity buttons_added"><label class="screen-reader-text">Minus
-                                    Quantity</label><a href="javascript:void(0)" id="minus_qty" class="minus">-</a>
-                                <label class="screen-reader-text" for="">Product Name 1
-                                    quantity</label>
-                                <input type="number" id="" class="input-text qty text" name="" value="2" size="4"
-                                    min="0" max="" step="1" placeholder="" inputmode="numeric" autocomplete="off">
-                                <label class="screen-reader-text" for="plus_qty"> Plus Quantity</label><a
-                                    href="javascript:void(0)" id="plus_qty" class="plus">+</a>
-                            </div>
-                        </td>
-                        <td class="product-subtotal" data-title="Subtotal">
-                            <span class="amount"><bdi>990 $</bdi></span>
-                        </td>
-                    </tr>
-                    <tr>
-                        <td colspan="6" class="actions">
-                            <div class="coupon box-coupon">
-                                <div style="" class="box-coupon-input">
-                                    <input type="text" name="coupon_code" class="input-text mr-2" id="coupon_code"
-                                        value="" placeholder="Coupon code"> <button type="submit" class="button"
-                                        name="apply_coupon" value="Apply coupon">Apply coupon</button>
-                                </div>
+        <div style="margin-top: 3rem; margin-bottom: 3rem;" class="ast-container">
+            <h4>CHECKOUT</h4>
+            <div class="woocommerce-info">
+                <i class="fa fa-list-alt" aria-hidden="true"></i>
+                Have a coupon? <a href="#" class="showcoupon">Click here to enter your code</a>
+            </div>
+            <form class="checkout_coupon woocommerce-form-coupon">
 
-                                <button type="submit" class="button button-update" name="update_cart"
-                                    value="Update cart" disabled="">Update cart</button>
-                            </div>
-                        </td>
-                    </tr>
-                </tbody>
-            </table>
-            <div class="card-total">
-                <div class="card-item">
-                    <div class="card-header">
-                        <h5>
-                            CARD TOTALS
-                        </h5>
-                    </div>
-                    <div class="grid-col-2 mr-4 ml-4" style="border-bottom: 1px solid #ddd">
-                        <div>Subtotal</div>
-                        <div>400 $</div>
-                    </div>
-                    <div class="grid-col-2 pt-2 mb-4 mr-4 ml-4" style="border-bottom: 1px solid #ddd">
-                        <div>Subtotal</div>
-                        <div>400 $</div>
-                    </div>
+                <p>If you have a coupon code, please apply it below.</p>
+                <div style="display: flex;">
+                    <p class="form-row form-row-first">
+                        <label for="coupon_code" class="screen-reader-text">Coupon:</label>
+                        <input type="text" name="coupon_code" class="input-text" placeholder="Coupon code"
+                            id="coupon_code" value="">
+                    </p>
 
-                    <div class="card-footer">
-                        <button type="submit" class="button" name="apply_coupon" value="Apply coupon">Process to
-                            checkout</button>
-                    </div>
+                    <p class="form-row form-row-last">
+                        <button style="padding: 7px 15px; margin-top: 5px;" type="submit" class="button"
+                            name="apply_coupon" value="Apply coupon">Apply
+                            coupon</button>
+                    </p>
                 </div>
 
-            </div>
 
+                <div class="clear"></div>
+            </form>
+            <div class="box-checkout">
+                <div>
+                    <h5 class="title-form">BILLING DETAILS</h5>
+                    <div class="grid-col-2">
+                        <div>
+                            <p>First name <span class="requied">*</span></p>
+                            <input class="w-100" type="text" name="" id="">
+                        </div>
+                        <div>
+                            <p>Last name <span class="requied">*</span></p>
+                            <input class="w-100" type="text" name="" id="">
+                        </div>
+                    </div>
+                    <div>
+                        <p>Company name (optional)
+                        </p>
+                        <input class="w-100" type="text" name="" id="">
+                    </div>
+                    <div>
+                        <p>Country / Region
+                            <span class="requied">*</span>
+                        </p>
+                        <select class="pt-2 select-box" id="selectElement"></select>
+                    </div>
+                    <div>
+                        <p>Street address
+                            <span class="requied">*</span>
+                        </p>
+                        <input class="w-100" type="text" name="" id="">
+                        <input class="w-100 mt-2" type="text" name="" id="">
+                    </div>
+                    <div>
+                        <p>Town / City
+                            <span class="requied">*</span>
+                        </p>
+                        <input class="w-100" type="text" name="" id="">
+                    </div>
+                    <div>
+                        <p>Postcode / ZIP
+                            <span class="requied">*</span>
+                        </p>
+                        <input class="w-100" type="text" name="" id="">
+                    </div>
+                    <div>
+                        <p>Phone
+                            <span class="requied">*</span>
+                        </p>
+                        <input class="w-100" type="text" name="" id="">
+                    </div>
+                    <div>
+                        <p>Email address
+                            <span class="requied">*</span>
+                        </p>
+                        <input class="w-100" type="text" name="" id="">
+                    </div>
+                    <h5 class="title-form">BILLING DETAILS</h5>
+                    <div>
+                        <p>Order notes (optional)
+                        </p>
+                        <textarea required="" class="" rows="2" placeholder="" autocomplete="off" style="">
+                                        </textarea>
+                    </div>
+                </div>
+                <div class="box-order">
+                    <h5 style="font-weight: 700; font-size: 1.2rem; margin: 0;">YOUR ORDER</h5>
+                    <div class="grid-col-2 item-order" style="font-weight: 700; padding-top: 2rem;">
+                        <div>Product</div>
+                        <div style="text-align: end;">Subtotal</div>
+                    </div>
+                    <div class="grid-col-2 item-order">
+                        <div>Product Name 10 × 1
+                        </div>
+                        <div style="text-align: end;">1.700 $</div>
+                    </div>
+                    <div class="grid-col-2 item-order">
+                        <div>Subtotal</div>
+                        <div style="text-align: end;">1.700 $</div>
+                    </div>
+                    <div class="grid-col-2 item-order">
+                        <div>Total</div>
+                        <div style="text-align: end;">1.700 $</div>
+                    </div>
+                    <div class="mt-2" style="text-align: end;">
+                        <img width="40" height="25" src="./img/card-visa.svg" alt="">
+                        <img width="40" height="25" src="./img/card-mastercard.svg" alt="">
+                        <img width="40" height="25" src="./img/card-amex.svg" alt="">
+                        <img width="40" height="25" src="./img/card-discover.svg" alt="">
+                        <img width="40" height="25" src="./img/card-dinersclub.svg" alt="">
+                        <img width="40" height="25" src="./img/card-maestro.svg" alt="">
+                        <img width="40" height="25" src="./img/card-jcb.svg" alt="">
+                    </div>
+                    <div class="payment-box">
+                        <div>TEST MODE ENABLED</div>
+                        <div>Test credit card numbers: <code>378282246310005</code> or <code>4111111111111111</code>
+                        </div>
+                        <div>
+                            <p class="form-row">
+                                <label for="wc-braintree-credit-card-test-amount">Test Amount <span
+                                        style="font-size: 10px;" class="description">- Enter a <a
+                                            href="https://developers.braintreepayments.com/reference/general/testing/php#test-amounts">test
+                                            amount</a> to trigger a specific error response, or leave blank to use the
+                                        order
+                                        total.</span></label>
+                            </p>
+                        </div>
+                        <div>
+                            <input type="text" id="wc-braintree-credit-card-test-amount"
+                                name="wc-braintree-credit-card-test-amount">
+                        </div>
+                        <div>
+                            <div>
+                                <p>Card Number
+                                    <span class="requied">*</span>
+                                </p>
+                                <div style="position: relative;">
+                                    <input autocomplete="cc-number" type="text" spellcheck="false" class="number w-100"
+                                        data-braintree-name="number" name="credit-card-number" id="credit-card-number"
+                                        pattern="\d*" inputmode="numeric" maxlength="22"
+                                        placeholder="•••• •••• •••• ••••">
+                                    <i style="position: absolute; right: 1rem; top: 0.5rem"
+                                        class="fa fa-credit-card-alt fa-2x" aria-hidden="true"></i>
+                                </div>
+                            </div>
+                            <div class="grid-col-2">
+                                <div>
+                                    <p>Expiration (MMYY)
+                                        <span class="requied">*</span>
+                                    </p>
+                                    <input class="w-100" type="text" name="" id="">
+                                </div>
+                                <div>
+                                    <div>
+                                        <p>Card Security Code
+                                            <span class="requied">*</span>
+                                        </p>
+                                        <input class="w-100" type="text" name="" id="">
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mt-2">
+                        Your personal data will be used to process your order, support your experience throughout this
+                        website, and for other purposes described in our privacy policy.
+                    </div>
+                    <button class="w-100 mt-2" style="padding: 7px 15px;">PLACE ORDER</button>
+                </div>
+            </div>
+        </div>
+        <div class="astra-mobile-cart-overlay"></div>
+        <div id="astra-mobile-cart-drawer" class="astra-cart-drawer">
+            <div class="astra-cart-drawer-header">
+                <button type="button" class="astra-cart-drawer-close" aria-label="Close Cart Drawer">
+                    <span class="ahfb-svg-iconset ast-inline-flex svg-baseline"></span>
+                </button>
+                <div class="astra-cart-drawer-title">Shopping Cart</div>
+            </div>
+            <div class="astra-cart-drawer-content">
+                <div class="widget woocommerce widget_shopping_cart">
+                    <div class="widget_shopping_cart_content"></div>
+                </div>
+            </div>
         </div>
         <footer class="site-footer">
             <div
@@ -514,6 +438,7 @@
                                                 height="55" title loading="lazy" />
                                         </figure>
                                     </div>
+                                    `
                                 </section>
                             </aside>
                         </div>
@@ -610,7 +535,21 @@
                 </div>
             </div>
         </footer>
-        <script src="./js/dropdown.js"></script>
+    </div>
+    <script src="./js/dropdown.js"></script>
+    <script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+    <script src="https://unpkg.com/slim-select@latest/dist/slimselect.min.js"></script>
+    <script>
+        (function () {
+            var c = document.body.className;
+            c = c.replace(/woocommerce-no-js/, "woocommerce-js");
+            document.body.className = c;
+        })();
+        new SlimSelect({
+            select: "#selectElement",
+            data: [{ text: "Hà nội" }, { text: "Hồ chí minh" }, { text: "Đà nẵng" }],
+        });
+    </script>
 </body>
 
 </html>

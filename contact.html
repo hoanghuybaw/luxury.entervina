@@ -24,6 +24,7 @@
         <link rel="stylesheet"
             href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css" />
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+        <link rel="stylesheet" href="./css/dropdown.css">
         <title>Document</title>
         <style>
             .grid-col-2 {
@@ -88,6 +89,12 @@
                 .box-contact .item-1 {
                     text-align: center;
                     padding-right: unset
+                }
+            }
+
+            @media (max-width: 921px) {
+                .box-contact .item-2 .item-2-form {
+                    width: 100%;
                 }
             }
         </style>
@@ -186,34 +193,29 @@
                 </div>
             </div>
             <div id="ast-mobile-header" class="ast-mobile-header-wrap">
-                <div class="ast-main-header-wrap main-header-bar-wrap">
-                    <div
-                        class="ast-primary-header-bar ast-primary-header main-header-bar site-primary-header-wrap ast-builder-grid-row-layout-default ast-builder-grid-row-tablet-layout-default ast-builder-grid-row-mobile-layout-default">
-                        <div class="ast-builder-grid-row ast-builder-grid-row-has-sides ast-builder-grid-row-no-center">
-                            <div
-                                class="site-header-primary-section-left site-header-section ast-flex site-header-section-left">
-                                <div class="ast-builder-layout-element ast-flex">
-                                    <div class="site-branding ast-site-identity">
-                                        <span class="site-logo-img"><a href="index.html" class="custom-logo-link"
-                                                rel="home" aria-current="page"><img width="117" height="55"
-                                                    src="./img/logo-regular.png" class="custom-logo" alt="luxury"
-                                                    decoding="async" /></a></span>
-                                    </div>
-                                </div>
+                <div class="ast-builder-grid-row">
+                    <div class="site-header-primary-section-left">
+                        <div class="ast-builder-layout-element ast-flex">
+                            <div class="site-branding ast-site-identity">
+                                <span class="site-logo-img"><a href="index.html" class="custom-logo-link" rel="home"
+                                        aria-current="page"><img width="117" height="55" src="./img/logo-regular.png"
+                                            class="custom-logo" alt="luxury" decoding="async" /></a></span>
                             </div>
-                            <div
-                                class="site-header-primary-section-right site-header-section ast-flex ast-grid-right-section">
-                                <div class="ast-builder-layout-element ast-flex"
-                                    data-section="section-header-mobile-trigger">
-                                    <div class="ast-button-wrap">
-                                        <button type="button"
-                                            class="menu-toggle main-header-menu-toggle ast-mobile-menu-trigger-minimal">
-                                            <span class="screen-reader-text">Main Menu</span>
-                                            <span class="mobile-menu-toggle-icon">
-                                                <span class="ahfb-svg-iconset ast-inline-flex svg-baseline"></span><span
-                                                    class="ahfb-svg-iconset ast-inline-flex svg-baseline"></span>
-                                            </span>
-                                        </button>
+                        </div>
+                    </div>
+                    <div class="ast-flex ast-grid-right-section">
+                        <div class="" data-section="section-header-mobile-trigger">
+                            <div class="ast-button-wrap">
+                                <div class="dropdown">
+                                    <button style="border: none !important;" onclick="toggleDropdown()" type="button"
+                                        class=" dropbtn menu-toggle main-header-menu-toggle ast-mobile-menu-trigger-minimal">
+                                        <i id="dropdownIcon" class="fa fa-bars" aria-hidden="true"></i>
+                                    </button>
+                                    <div id="myDropdown" class="dropdown-content">
+                                        <a href="./product.html">RINGS</a>
+                                        <a href="./product.html">BRACELETS</a>
+                                        <a href="./product.html">EARINGS</a>
+                                        <a href="./product.html">EARINGS</a>
                                     </div>
                                 </div>
                             </div>
@@ -224,7 +226,7 @@
         </header>
         <div id="content" class="site-content">
             <div>
-                <div style="margin-top: 0;" id="primary" class="content-area primary">
+                <div style="margin-top: 0; padding-top: 0;" id="primary" class="content-area primary">
                     <main id="main" class="site-main">
                         <div class="contacUs-banner LuEn-block-uagb-container">
                             <p>GET IN TOUCH</p>
@@ -401,6 +403,7 @@
             </div>
         </footer>
     </div>
+    <script src="./js/dropdown.js"></script>
 </body>
 
 </html>

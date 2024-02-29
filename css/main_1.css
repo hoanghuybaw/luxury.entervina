@@ -409,12 +409,26 @@ button,
 input[type="button"],
 input[type="reset"],
 input[type="submit"] {
-  border: 1px solid;
-  border-color: var(--ast-border-color);
-  border-radius: 2px;
-  background: #e6e6e6;
-  padding: 0.6em 1em 0.4em;
-  color: #fff;
+  border-style: solid;
+  border: 1px solid !important;
+  border-color: var(--ast-global-color-2);
+  background-color: transparent;
+  color: var(--ast-global-color-2);
+  font-family: "Roboto Condensed", sans-serif;
+  font-weight: inherit;
+  line-height: 1em;
+  text-transform: uppercase;
+  letter-spacing: 2px;
+  font-size: 14px;
+  font-size: 0.93333333333333rem;
+  border-top-left-radius: 0px;
+  border-top-right-radius: 0px;
+  border-bottom-right-radius: 0px;
+  border-bottom-left-radius: 0px;
+  padding-top: 15px;
+  padding-right: 30px;
+  padding-bottom: 15px;
+  padding-left: 30px;
 }
 .ast-button:focus,
 .ast-button:hover,
@@ -587,9 +601,6 @@ img {
 .entry-content h5,
 .entry-content h6 {
   margin-bottom: 20px;
-}
-p {
-  margin-bottom: 1.75em;
 }
 blockquote {
   margin: 1.5em 1em 1.5em 3em;
@@ -1449,7 +1460,6 @@ body {
 .ast-builder-grid-row {
   display: grid;
   grid-template-columns: auto auto;
-  align-items: center;
   grid-column-gap: 20px;
   overflow-wrap: anywhere;
 }

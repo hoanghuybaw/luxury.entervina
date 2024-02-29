@@ -3070,12 +3070,12 @@ button.pswp__button--zoom:hover {
 .woocommerce-error,
 .woocommerce-info,
 .woocommerce-message {
-  padding: 1em 2em 1em 3.5em;
+  padding: 1em 1em 1em 1em;
   margin: 0 0 2em;
   position: relative;
   background-color: #f7f6f7;
   color: #515151;
-  border-top: 3px solid #a46497;
+  border-top: 3px solid rgba(0,0,0,0.7);
   list-style: none outside;
   zoom: 1;
   width: auto;
@@ -3095,16 +3095,6 @@ button.pswp__button--zoom:hover {
 .woocommerce-message::after {
   clear: both;
 }
-.woocommerce-error::before,
-.woocommerce-info::before,
-.woocommerce-message::before {
-  font-family: WooCommerce;
-  content: "\e028";
-  display: inline-block;
-  position: absolute;
-  top: 1em;
-  left: 1.5em;
-}
 .woocommerce-error .button,
 .woocommerce-info .button,
 .woocommerce-message .button {
@@ -3123,12 +3113,6 @@ button.pswp__button--zoom:hover {
 .woocommerce-message::before {
   content: "\e015";
   color: #8fae1b;
-}
-.woocommerce-info {
-  border-top-color: #1e85be;
-}
-.woocommerce-info::before {
-  color: #1e85be;
 }
 .woocommerce-error {
   border-top-color: #b81c23;
