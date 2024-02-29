@@ -34,6 +34,50 @@
       rel="stylesheet"
       href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
     />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/css/lightslider.min.css"
+    />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
+    <script src="./js/sticky-add-to-cart.js"></script>
+    <style>
+      .product-gallery {
+        width: 100%;
+        max-width: 600px;
+        margin: auto;
+      }
+
+      .lightSlider .active img {
+        width: 100% !important;
+      }
+
+      .lSSlideOuter .lSPager.lSGallery img {
+        display: block;
+        height: 100px;
+        max-width: 100%;
+      }
+      .lSGallery img {
+        width: 100%;
+        object-fit: cover;
+        height: auto;
+        opacity: 0.5;
+      }
+      .lSGallery .active img {
+        opacity: 1;
+      }
+      .box-product {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 2rem;
+      }
+      .wc-tabs {
+        border-top: 1px solid #ddd;
+      }
+      .wc-tabs .active {
+        border-top: 2px solid #000;
+      }
+    </style>
     <title>luxury</title>
   </head>
 
@@ -229,42 +273,347 @@
           <div id="primary" class="content-area primary">
             <main id="main" class="site-main">
               <div class="ast-woocommerce-container">
-                <nav class="woocommerce-breadcrumb" aria-label="Breadcrumb">
-                  <a href="../../../index.html">Home</a
-                  >&nbsp;&#47;&nbsp;Bracelets
-                </nav>
-                <header class="woocommerce-products-header">
-                  <h1 class="woocommerce-products-header__title page-title">
-                    Bracelets
-                  </h1>
-                </header>
-                <div style="display: flex; justify-content: space-between">
-                  <p class="woocommerce-result-count">Showing all 6 results</p>
-                  <form class="woocommerce-ordering" method="get">
-                    <select
-                      name="orderby"
-                      class="orderby"
-                      aria-label="Shop order"
-                    >
-                      <option value="menu_order" selected="selected">
-                        Default sorting
-                      </option>
-                      <option value="popularity">Sort by popularity</option>
-                      <option value="rating">Sort by average rating</option>
-                      <option value="date">Sort by latest</option>
-                      <option value="price">Sort by price: low to high</option>
-                      <option value="price-desc">
-                        Sort by price: high to low
-                      </option>
-                    </select>
-                    <input type="hidden" name="paged" value="1" />
-                  </form>
+                <div
+                  class="ast-article-single desktop-align-center tablet-align-center mobile-align-center product type-product post-692 status-publish first instock product_cat-bracelets has-post-thumbnail sale shipping-taxable purchasable product-type-simple"
+                >
+                  <div class="box-product">
+                    <ul id="product-gallery">
+                      <li
+                        class="img-thumb"
+                        data-thumb="./img/bracelet-01-a.jpg"
+                      >
+                        <img src="./img/bracelet-01-a.jpg" alt="Image 1" />
+                      </li>
+                      <li
+                        class="img-thumb"
+                        data-thumb="./img/bracelet-01-b.jpg"
+                      >
+                        <img src="./img/bracelet-01-b.jpg" alt="Image 2" />
+                      </li>
+                      <li
+                        class="img-thumb"
+                        data-thumb="./img/bracelet-01-c-600x750.jpg"
+                      >
+                        <img
+                          src="./img/bracelet-01-c-600x750.jpg"
+                          alt="Image 2"
+                        />
+                      </li>
+                      <li class="img-thumb" data-thumb="./img/bracelet-d.jpg">
+                        <img src="./img/bracelet-d.jpg" alt="Image 2" />
+                      </li>
+                    </ul>
+                    <div class="summary entry-summary">
+                      <nav
+                        class="woocommerce-breadcrumb"
+                        aria-label="Breadcrumb"
+                      >
+                        <a href="../../../index.html">Home</a
+                        >&nbsp;&#47;&nbsp;<a
+                          href="../../product-category/bracelets/index.html"
+                          >Bracelets</a
+                        >&nbsp;&#47;&nbsp;Product Name 3
+                      </nav>
+                      <span class="single-product-category"
+                        ><a
+                          href="../../product-category/bracelets/index.html"
+                          rel="tag"
+                          >Bracelets</a
+                        ></span
+                      >
+                      <h1 class="product_title entry-title">Product Name 3</h1>
+                      <div style="display: flex; gap: 1rem">
+                        <p class="price">
+                          <del aria-hidden="true"
+                            ><span class="woocommerce-Price-amount amount"
+                              ><bdi
+                                >1.200&nbsp;<span
+                                  class="woocommerce-Price-currencySymbol"
+                                  >&#36;</span
+                                ></bdi
+                              ></span
+                            ></del
+                          >
+                          <ins
+                            ><span class="woocommerce-Price-amount amount"
+                              ><bdi
+                                >990&nbsp;<span
+                                  class="woocommerce-Price-currencySymbol"
+                                  >&#36;</span
+                                ></bdi
+                              ></span
+                            ></ins
+                          >
+                        </p>
+                        <span
+                          class="ast-shipping-text"
+                          style="padding-top: 0.5rem"
+                          >&amp; Free Shipping</span
+                        >
+                      </div>
+
+                      <div
+                        class="woocommerce-product-details__short-description"
+                      >
+                        <p>
+                          Ut non elit lorem. Duis pharetra odio vitae nisl
+                          luctus, at volutpat arcu lacinia. Aliquam id
+                          ullamcorper augue. Fusce feugiat nibh et nisl mollis
+                          hendrerit. Mauris sit amet nulla in augue laoreet
+                          lobortis ac eleifend nunc. Quisque eleifend
+                          sollicitudin nulla, et consequat eros. Donec
+                          pellentesque dapibus massa ut cursus.
+                        </p>
+                        <p>
+                          Quisque ut augue eu dui semper eleifend. Aliquam
+                          imperdiet nisl libero, vitae vulputate lectus
+                          fringilla eget.
+                        </p>
+                      </div>
+
+                      <form class="cart">
+                        <div class="quantity">
+                          <label class="screen-reader-text"
+                            >Product Name 3 quantity</label
+                          >
+                          <input
+                            type="number"
+                            class="input-text qty text"
+                            value="1"
+                            size="4"
+                            min="1"
+                            max=""
+                            step="1"
+                            placeholder=""
+                            inputmode="numeric"
+                            autocomplete="off"
+                          />
+                        </div>
+
+                        <button
+                          name="add-to-cart"
+                          class="single_add_to_cart_button button alt"
+                        >
+                          Add to cart
+                        </button>
+                      </form>
+
+                      <div class="product_meta">
+                        <span class="posted_in"
+                          >Category:
+                          <a
+                            href="../../product-category/bracelets/index.html"
+                            rel="tag"
+                            >Bracelets</a
+                          ></span
+                        >
+                      </div>
+                    </div>
+                  </div>
+                  <div>
+                    <div class="woocommerce-tabs wc-tabs-wrapper">
+                      <ul class="tabs wc-tabs" role="tablist">
+                        <li
+                          style="cursor: pointer"
+                          class="description_tab"
+                          id="tab-title-description"
+                          role="tab"
+                          aria-controls="tab-description"
+                        >
+                          <a
+                            class="tablinks"
+                            onclick="openCity(event, 'Description')"
+                          >
+                            Description
+                          </a>
+                        </li>
+                        <li
+                          style="cursor: pointer"
+                          class="reviews_tab"
+                          id="tab-title-reviews"
+                          role="tab"
+                          aria-controls="tab-reviews"
+                        >
+                          <a
+                            class="tablinks"
+                            onclick="openCity(event, 'Reviews')"
+                          >
+                            Reviews (0)
+                          </a>
+                        </li>
+                      </ul>
+                      <div
+                        class="woocommerce-Tabs-panel woocommerce-Tabs-panel--description panel entry-content wc-tab tabcontent"
+                        id="Description"
+                        role="tabpanel"
+                        aria-labelledby="tab-title-description"
+                      >
+                        <p>
+                          Nullam dapibus metus lacinia, vestibulum arcu vitae,
+                          fringilla elit. Maecenas pellentesque justo a bibendum
+                          eleifend. Nunc metus metus, bibendum at quam eget,
+                          congue fermentum diam. Cras rhoncus ex a neque dictum
+                          pellentesque. Cras et placerat est, et feugiat diam.
+                          Aliquam nec odio quis nibh fringilla euismod.
+                        </p>
+                      </div>
+                      <div
+                        style="display: none"
+                        class="woocommerce-Tabs-panel woocommerce-Tabs-panel--reviews panel entry-content wc-tab tabcontent"
+                        id="Reviews"
+                        role="tabpanel"
+                        aria-labelledby="tab-title-reviews"
+                      >
+                        <div id="reviews" class="woocommerce-Reviews">
+                          <div id="comments">
+                            <h2 class="woocommerce-Reviews-title">Reviews</h2>
+
+                            <p class="woocommerce-noreviews">
+                              There are no reviews yet.
+                            </p>
+                          </div>
+
+                          <div id="review_form_wrapper">
+                            <div id="review_form">
+                              <div id="respond" class="comment-respond">
+                                <span
+                                  id="reply-title"
+                                  class="comment-reply-title"
+                                  >Be the first to review &ldquo;Product Name
+                                  4&rdquo;
+                                  <small
+                                    ><a
+                                      rel="nofollow"
+                                      id="cancel-comment-reply-link"
+                                      href="index.html#respond"
+                                      style="display: none"
+                                      >Cancel reply</a
+                                    ></small
+                                  ></span
+                                >
+                                <form
+                                  method="post"
+                                  id="commentform"
+                                  class="comment-form"
+                                >
+                                  <p class="comment-notes">
+                                    <span id="email-notes"
+                                      >Your email address will not be
+                                      published.</span
+                                    >
+                                    <span class="required-field-message"
+                                      >Required fields are marked
+                                      <span class="required">*</span></span
+                                    >
+                                  </p>
+                                  <div class="comment-form-rating">
+                                    <label for="rating"
+                                      >Your rating&nbsp;<span class="required"
+                                        >*</span
+                                      ></label
+                                    ><select name="rating" id="rating" required>
+                                      <option value="">Rate&hellip;</option>
+                                      <option value="5">Perfect</option>
+                                      <option value="4">Good</option>
+                                      <option value="3">Average</option>
+                                      <option value="2">Not that bad</option>
+                                      <option value="1">Very poor</option>
+                                    </select>
+                                  </div>
+                                  <p class="comment-form-comment">
+                                    <label for="comment"
+                                      >Your review&nbsp;<span class="required"
+                                        >*</span
+                                      ></label
+                                    ><textarea
+                                      id="comment"
+                                      name="comment"
+                                      cols="45"
+                                      rows="8"
+                                      required
+                                    ></textarea>
+                                  </p>
+                                  <p class="comment-form-author">
+                                    <label for="author"
+                                      >Name&nbsp;<span class="required"
+                                        >*</span
+                                      ></label
+                                    ><input
+                                      id="author"
+                                      name="author"
+                                      type="text"
+                                      value=""
+                                      size="30"
+                                      required
+                                    />
+                                  </p>
+                                  <p class="comment-form-email">
+                                    <label for="email"
+                                      >Email&nbsp;<span class="required"
+                                        >*</span
+                                      ></label
+                                    ><input
+                                      id="email"
+                                      name="email"
+                                      type="email"
+                                      value=""
+                                      size="30"
+                                      required
+                                    />
+                                  </p>
+                                  <p class="comment-form-cookies-consent">
+                                    <input
+                                      id="luEncomment-cookies-consent"
+                                      name="luEncomment-cookies-consent"
+                                      type="checkbox"
+                                      value="yes"
+                                    />
+                                    <label for="luEncomment-cookies-consent"
+                                      >Save my name, email, and website in this
+                                      browser for the next time I
+                                      comment.</label
+                                    >
+                                  </p>
+                                  <p class="form-submit">
+                                    <input
+                                      name="submit"
+                                      type="submit"
+                                      id="submit"
+                                      class="submit"
+                                      value="Submit"
+                                    />
+                                    <input
+                                      type="hidden"
+                                      name="comment_post_ID"
+                                      value="693"
+                                      id="comment_post_ID"
+                                    />
+                                    <input
+                                      type="hidden"
+                                      name="comment_parent"
+                                      id="comment_parent"
+                                      value="0"
+                                    />
+                                  </p>
+                                </form>
+                              </div>
+                              <!-- #respond -->
+                            </div>
+                          </div>
+
+                          <div class="clear"></div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <section class="related products">
+                    <h2>Related products</h2>
+                    <div class="woocommerce columns-4">
+                      <ul class="products columns-4" id="productList"></ul>
+                    </div>
+                  </section>
                 </div>
               </div>
-              <div class="woocommerce columns-4">
-                <ul class="products columns-4" id="productList"></ul>
-              </div>
-              <!-- .ast-woocommerce-container -->
             </main>
           </div>
         </div>
@@ -445,6 +794,7 @@
         </div>
       </footer>
     </div>
+
     <script>
       (function () {
         var c = document.body.className;
@@ -460,18 +810,21 @@
           originalPrice: 600,
           discountedPrice: 495,
           linkImg: "./img/product1.jpg",
+          linkImg2: "./img/bracelet-01-b.jpg",
         },
         {
           name: "Product Name 2",
           originalPrice: 700,
           discountedPrice: 599,
           linkImg: "./img/product1.jpg",
+          linkImg2: "./img/bracelet-01-b.jpg",
         },
         {
           name: "Product Name 2",
           originalPrice: 700,
           discountedPrice: 599,
           linkImg: "./img/product1.jpg",
+          linkImg2: "./img/bracelet-01-b.jpg",
         },
       ];
 
@@ -481,12 +834,12 @@
         var li = document.createElement("li");
         li.classList.add("product");
         li.innerHTML = `<div class="astra-shop-thumbnail-wrap">
-                <a href="../../../detailProduct.html"class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
+                <a href=""class="woocommerce-LoopProduct-link woocommerce-loop-product__link">
                     <img src="${product.linkImg}" class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail" alt />
-                    <img src="${product.linkImg}" class="show-on-hover"/></a>
+                    <img src="${product.linkImg2}" class="show-on-hover"/></a>
             </div>
             <div class="astra-shop-summary-wrap">
-                <a href="../../../detailProduct.html" class="ast-loop-product__link">
+                <a href="" class="ast-loop-product__link">
                     <h2 class="woocommerce-loop-product__title">
                         ${product.name}
                     </h2>
@@ -497,6 +850,68 @@
             </div>`;
         productList.appendChild(li);
       });
+    </script>
+
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
+
+    <script>
+      var swiper = new Swiper(".mySwiper", {
+        loop: true,
+        spaceBetween: 10,
+        slidesPerView: 4,
+        freeMode: true,
+        watchSlidesProgress: true,
+      });
+      var swiper2 = new Swiper(".mySwiper2", {
+        loop: true,
+        spaceBetween: 10,
+        navigation: {
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        },
+        thumbs: {
+          swiper: swiper,
+        },
+      });
+    </script>
+
+    <script>
+      $(document).ready(function () {
+        $("#product-gallery").lightSlider({
+          gallery: true,
+          item: 1,
+          loop: true,
+          thumbItem: 4,
+          slideMargin: 0,
+          enableDrag: false,
+          currentPagerPosition: "left",
+          onSliderLoad: function (el) {
+            el.lightGallery({
+              selector: "#product-gallery .lslide",
+            });
+          },
+        });
+      });
+    </script>
+
+    <script>
+      window.onload = function () {
+        document.getElementsByClassName("tablinks")[0].className += " active";
+      };
+
+      function openCity(evt, cityName) {
+        var i, tabcontent, tablinks;
+        tabcontent = document.getElementsByClassName("tabcontent");
+        for (i = 0; i < tabcontent.length; i++) {
+          tabcontent[i].style.display = "none";
+        }
+        tablinks = document.getElementsByClassName("tablinks");
+        for (i = 0; i < tablinks.length; i++) {
+          tablinks[i].className = tablinks[i].className.replace(" active", "");
+        }
+        document.getElementById(cityName).style.display = "block";
+        evt.currentTarget.className += " active";
+      }
     </script>
   </body>
 </html>

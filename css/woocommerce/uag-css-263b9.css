@@ -2108,6 +2108,48 @@ body
   background-image: url(../../img/hero.jpg);
   background-clip: padding-box;
 }
+.contacUs-banner {
+  box-shadow: 0px 0px #00000070;
+  padding-top: 199px;
+  padding-bottom: 199px;
+  background-position: 50% 50%;
+  background-size: cover;
+  background-attachment: scroll;
+  background-image: url(../../img/hero.jpg);
+  background-clip: padding-box;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  color: #fff;
+}
+.contacUs-banner p {
+  margin-bottom: 0;
+}
+.contacUs-banner h1 {
+  color: #fff;
+  margin-top: 0;
+}
+.contacUs-banner::before {
+  content: "";
+  position: absolute;
+  pointer-events: none;
+  top: -0px;
+  left: -0px;
+  width: calc(100% + 0px + 0px);
+  height: calc(100% + 0px + 0px);
+  border-color: inherit;
+  background: var(--ast-global-color-7);
+  opacity: 0.2;
+}
+.uagb-block-80391c88::before {
+  background: #000000
+}
+.uagb-block-4126f5db {
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
 .uagb-block-c5ef96eb .uagb-ifb-icon {
   width: 30px;
   line-height: 30px;

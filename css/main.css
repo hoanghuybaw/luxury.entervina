@@ -980,14 +980,10 @@ li.edd-custom-menu-item .ast-edd-site-header-cart span.astra-icon:after {
 
 @media (max-width: 921px) {
   .ast-plain-container.ast-no-sidebar #primary {
-    padding: 0;
+    margin-top: 1.5rem;
   }
 }
 
-.ast-plain-container.ast-no-sidebar #primary {
-  margin-top: 0;
-  margin-bottom: 0;
-}
 
 .LuEn-block-button.is-style-outline .LuEn-block-button__link {
   border-color: var(--ast-global-color-2);
