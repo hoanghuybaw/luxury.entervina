@@ -4888,6 +4888,6 @@ button.pswp__button--zoom:hover {
   }
 }
 .woocommerce-js .variations select,
-/* .woocommerce-js .woocommerce-ordering select {
+.woocommerce-js .woocommerce-ordering select {
   padding: 0.5em;
-} */
+}
