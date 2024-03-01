@@ -26,6 +26,7 @@
         <script src="https://cdnjs.cloudflare.com/ajax/libs/lightslider/1.1.6/js/lightslider.min.js"></script>
         <link rel="stylesheet" href="./css/dropdown.css">
         <link rel="stylesheet" href="./css/drawer.css">
+        <link rel="stylesheet" href="./css/modal.css">
         <title>Document</title>
         <style>
             .grid-col-2 {
@@ -185,13 +186,12 @@
                                             </div>
                                         </div>
                                     </div>
-                                    <i class="fa fa-search" aria-hidden="true"></i>
+                                    <button id="myBtn"><i class="fa fa-search"></i></button>
                                     <div>
                                         <a href="#" data-drawer-trigger aria-controls="drawer-name"
                                             aria-expanded="false"><i class="fa fa-shopping-basket"
                                                 aria-hidden="true"></i></a>
                                     </div>
-
                                 </div>
                             </div>
                         </div>
@@ -213,7 +213,7 @@
                             <li class="woocommerce-mini-cart-item mini_cart_item" style="display: flex;">
                                 <div>
                                     <a href="">
-                                        <img width="30o" height="300"
+                                        <img width="300" height="300"
                                             src="https://luxury.entervina.com/wp-content/uploads/2022/08/earrings-05-a-300x300.jpg"
                                             class="attachment-woocommerce_thumbnail size-woocommerce_thumbnail"
                                             alt="">Product Name 11 </a>
@@ -254,7 +254,14 @@
                         </div>
                     </div>
                     <div class="ast-flex ast-grid-right-section">
+
                         <div class="" data-section="section-header-mobile-trigger">
+                            <div class="ast-button-wrap">
+                                <div>
+                                    <a href="#" data-drawer-trigger aria-controls="drawer-name" aria-expanded="false"><i
+                                            class="fa fa-shopping-basket" aria-hidden="true"></i></a>
+                                </div>
+                            </div>
                             <div class="ast-button-wrap">
                                 <div class="dropdown">
                                     <button style="border: none !important;" onclick="toggleDropdown()" type="button"
@@ -453,14 +460,28 @@
             </div>
         </footer>
     </div>
+    <div id="myModal" class="modal">
+        <div class="modal-content">
+            <span class="close">&times;</span>
+            <div class="ast-container modal-search">
+                <h4>START TYPING AND PRESS ENTER TO SEARCH</h4>
+                <form class="search-form w-70" action="">
+                    <input placeholder="Search" class="w-100" type="text" name="" id="">
+                    <i class="fa fa-search search-icon fa-2x"></i>
+                </form>
+            </div>
+        </div>
+    </div>
+    </div>
+    <script src="./js/modal.js"></script>
     <script src="./js/drawer.js"></script>
     <script src="./js/dropdown.js"></script>
     <script>
         (function () {
-      var c = document.body.className;
-      c = c.replace(/woocommerce-no-js/, "woocommerce-js");
-      document.body.className = c;
-    })();
+            var c = document.body.className;
+            c = c.replace(/woocommerce-no-js/, "woocommerce-js");
+            document.body.className = c;
+        })();
     </script>
 </body>
 
