@@ -1485,9 +1485,9 @@ p.demo_store[data-position="bottom"] {
 .woocommerce-js .woocommerce-ordering {
   margin: 0 0 1.5em;
 }
-.woocommerce-js .woocommerce-ordering select {
+/* .woocommerce-js .woocommerce-ordering select {
   vertical-align: top;
-}
+} */
 .woocommerce-js nav.woocommerce-pagination ul {
   flex-wrap: wrap;
   justify-content: center;
@@ -3020,7 +3020,6 @@ p.demo_store[data-position="bottom"] {
   padding: 0.8em;
   line-height: normal;
   padding-right: 2em;
-  appearance: none;
   background-position: 98% 50%;
   background-color: #fff;
   border-color: var(--ast-border-color);
@@ -4889,6 +4888,6 @@ button.pswp__button--zoom:hover {
   }
 }
 .woocommerce-js .variations select,
-.woocommerce-js .woocommerce-ordering select {
+/* .woocommerce-js .woocommerce-ordering select {
   padding: 0.5em;
-}
+} */

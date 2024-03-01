@@ -340,7 +340,7 @@ textarea:focus,
   .ast-button-wrap
   .ast-mobile-menu-trigger-minimal:focus,
 .ast-mobile-popup-drawer.active .menu-toggle-close:focus,
-.woocommerce-ordering select.orderby:focus,
+/* .woocommerce-ordering select.orderby:focus, */
 #ast-scroll-top:focus,
 #coupon_code:focus,
 .woocommerce-page #comment:focus,
